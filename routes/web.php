@@ -12,13 +12,8 @@
 */
 Route::get('/','HomeController@index');
 
+Route::get('welcome/{name?}/{lastname?}/{age?}', 'WelcomeController@welcome')
 
-
-
-Route::get('/{name?}/{lastname?}/{age?}', function ($name = '', $lastname = '', $age=0) {
-    //return view('welcome');
-    return '<h1>hello world '.$name.' '.$lastname.' '.$age.'</h1>';
-})
   /*
   ->where('name','[a-zA-Z]+')
   ->where('lastname','[a-zA-Z]+');
@@ -26,7 +21,6 @@ Route::get('/{name?}/{lastname?}/{age?}', function ($name = '', $lastname = '', 
   ->where([
     'name' => '[a-zA-Z]+',
     'lastname' => '[a-zA-Z]+',
-    'age' => '[0-9]{1,3
-}'
+    'age' => '[0-9]{1,3}'
   ])
 ;
