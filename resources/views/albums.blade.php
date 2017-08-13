@@ -3,10 +3,13 @@
 @section('content')
 
   <h2>ALBUMS</h2>
-  <ul>
+  <ul class="list-group">
     @foreach ($albums as $album)
 
-      <li>{{$album->album_name}}  </li>
+      <li class="list-group-item justify-content-between">
+            {{$album->album_name}}
+            <a href="/albums/{{$album->id}}/delete" class="btn btn-danger">   DELETE</a>
+      </li>
 
     @endforeach
 
