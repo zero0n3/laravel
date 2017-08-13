@@ -10,6 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Models\Photo;
+
 Route::get('/','HomeController@index');
 
 Route::get('welcome/{name?}/{lastname?}/{age?}', 'WelcomeController@welcome')
@@ -22,5 +24,21 @@ Route::get('welcome/{name?}/{lastname?}/{age?}', 'WelcomeController@welcome')
     'name' => '[a-zA-Z]+',
     'lastname' => '[a-zA-Z]+',
     'age' => '[0-9]{1,3}'
-  ])
-;
+  ]);
+
+Route::get('/albums','AlbumsController@index');
+
+Route::get('/albums/{id}/delete','AlbumsController@delete');
+
+
+
+Route::get('/photos',function(Request $res){
+    $q = Photo::select('*');
+
+    if($res::has('album_id')){
+        $photos = $q->where('album_id',$res::get('album_id'))->paginate(20);
+    } else {
+
+    }
+
+});
