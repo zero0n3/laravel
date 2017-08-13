@@ -1,4 +1,4 @@
-@extends('template.default');
+@extends('templates.default');
 
 @section('content')
 
@@ -6,9 +6,10 @@
   <ul>
     @foreach ($albums as $album)
 
-      <li>{{$person['name']}}   {{$person['lastname']}} </li>
+      <li>{{$album->album_name}}  </li>
 
     @endforeach
-</ul>
+
+  </ul>
 
 @endsection
