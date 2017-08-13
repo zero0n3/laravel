@@ -32,8 +32,17 @@ class AlbumsController extends Controller
         //dd($id);
 
         $sql = 'DELETE from albums WHERE ID= :id';
-        DB::delete($sql, ['id' => $id]);       
+        return DB::delete($sql, ['id' => $id]);
 
-        return redirect()->back();
+        //return redirect()->back();
     }
+
+    public function show( $id ){
+
+        //dd($id);
+
+        $sql = 'SELECT * from albums WHERE ID= :id';
+        return DB::select($sql, ['id' => $id]);
+    }
+
 }
