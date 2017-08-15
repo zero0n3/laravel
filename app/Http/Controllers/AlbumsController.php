@@ -23,7 +23,7 @@ class AlbumsController extends Controller
         }
 
         $albums = DB::select($sql, $where);
-        return view('albums', ['albums' => $albums]);
+        return view('albums.albums', ['albums' => $albums]);
     }
 
 
@@ -35,6 +35,14 @@ class AlbumsController extends Controller
         return DB::delete($sql, ['id' => $id]);
 
         //return redirect()->back();
+    }
+
+    public function edit( $id ){
+
+        //dd($id);
+
+        return view('albums.edit');
+
     }
 
     public function show( $id ){

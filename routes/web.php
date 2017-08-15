@@ -27,7 +27,8 @@ Route::get('welcome/{name?}/{lastname?}/{age?}', 'WelcomeController@welcome')
   ]);
 
 Route::get('/albums','AlbumsController@index');
-Route::delete('/albums/{id}/delete','AlbumsController@delete');
+Route::get('/albums/{id}/edit','AlbumsController@edit');
+Route::delete('/albums/{id}','AlbumsController@delete');
 Route::get('/albums/{id}','AlbumsController@show');
 
 
