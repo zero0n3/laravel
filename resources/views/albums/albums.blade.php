@@ -3,15 +3,22 @@
 @section('content')
 
   <h2>ALBUMS</h2>
+  @if (session()->has('message'))
+    @component('components.alert-info')
+      {{session()->get('message')}}
+    @endcomponent
+  @endif
   <form>
   <input type="hidden" name="_token" id="_token" value="{{csrf_token()}}">
   <ul class="list-group">
     @foreach ($albums as $album)
 
-      <li class="list-group-item justify-content-between">({{$album->id}}) {{$album->album_name}}
+        <li class="list-group-item justify-content-between">({{$album->id}}) {{$album->album_name}}
+          <div>
             <a href="/albums/{{$album->id}}/edit" class="btn btn-primary">UPDATE</a>
-            <a href="/albums/{{$album->id}}" class="btn btn-danger" id="delete">DELETE</a>
-      </li>
+            <a href="/albums/{{$album->id}}" class="btn btn-danger">DELETE</a>
+          </div>
+        </li>
 
     @endforeach
 
@@ -23,13 +30,18 @@
   @parent
     <script>
     $('document').ready(function(){
-      $('ul').on('click', 'a[id="delete"]', function(ele) {
+      $('div.alert').fadeOut(1500);
+      $('ul').on('click', 'a.btn-danger', function(ele) {
+      //$('#delete').click(function(ele) {
         ele.preventDefault();
         /* Act on the event */
+        //console.log(ele);
         var urlAlbum = $(this).attr('href');
-        //console.log(myvar);
-        var li = ele.target.parentNode;
 
+        //console.log(myvar);
+        //var li = ele.target.parentNode;
+        var li = ele.target.parentNode.parentNode;
+//console.log(li);
         $.ajax(
           urlAlbum,
           {
