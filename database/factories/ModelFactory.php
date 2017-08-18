@@ -14,6 +14,16 @@
 use App\User;
 use App\Models\Album;
 
+$cats = [
+    'abstract',
+    'animals',
+    'business',
+    'cats',
+    'city',
+    'food',
+    'nightlife'
+];
+
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 $factory->define(App\User::class, function (Faker\Generator $faker) {
     static $password;
@@ -27,26 +37,19 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 });
 
 
-$factory->define(App\Models\Album::class, function (Faker\Generator $faker) {
+$factory->define(App\Models\Album::class, function (Faker\Generator $faker) use ($cats){
 
 
     return [
         'album_name' => $faker->name,
         'description' => $faker->text(128),
-        'user_id' => User::inRandomOrder()->first()->id
+        'user_id' => User::inRandomOrder()->first()->id,
+        'album_thumb' => $faker->imageUrl(120, 120, $faker->randomElement($cats))
     ];
 });
 
-$factory->define(App\Models\Photo::class, function (Faker\Generator $faker) {
-    $cats = [
-        'abstract',
-        'animals',
-        'business',
-        'cats',
-        'city',
-        'food',
-        'nightlife'
-    ];
+$factory->define(App\Models\Photo::class, function (Faker\Generator $faker) use ($cats){
+
 
     return [
         'album_id' => Album::inRandomOrder()->first()->id,

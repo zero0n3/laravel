@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Album;
 use Illuminate\Http\Request;
 use DB;
 
@@ -9,7 +10,8 @@ class AlbumsController extends Controller
 {
     public function index( Request $request ){
 
-        $queryBuilder = DB::table('albums')->orderBy('id','desc');
+        //$queryBuilder = DB::table('albums')->orderBy('id','desc');
+        $queryBuilder = Album::orderBy('id','desc');
 
         if($request->has('id')){
             $queryBuilder->where('ID','=', $request->input('id'));
@@ -44,8 +46,10 @@ class AlbumsController extends Controller
     public function delete( $id ){
 
         //dd($id);
-        $res = DB::table('albums')->where('id', $id)->delete();
-        return $res;
+        //$res = DB::table('albums')->where('id', $id)->delete();
+        //$res = Album::where('id', $id)->delete();
+        $res = Album::find($id)->delete();
+        return ''.$res;
         /*$sql = 'DELETE from albums WHERE ID= :id';
         return DB::delete($sql, ['id' => $id]);
         */
@@ -55,9 +59,11 @@ class AlbumsController extends Controller
     public function edit( $id ){
 
         //dd($id);
-        $sql = 'SELECT id, album_name, description from albums WHERE ID = :id';
-        $album = DB::select($sql, ['id'=>$id]);
-        return view('albums.edit')->with('album', $album[0]);
+        //$sql = 'SELECT id, album_name, description from albums WHERE ID = :id';
+        //$album = DB::select($sql, ['id'=>$id]);
+        $album = Album::find($id);
+        //return view('albums.edit')->with('album', $album[0]);
+        return view('albums.edit')->with('album', $album);
 
     }
 
@@ -71,13 +77,24 @@ class AlbumsController extends Controller
 
     public function store( $id, Request $req ){
 
-        $res = DB::table('albums')->where('id', $id)->update(
+        //$res = DB::table('albums')->where('id', $id)->update(
+/*
+        $res = Album::where('id', $id)->update(
           [
             'album_name' => request()->input('name'),
             'description' => request()->input('description')
           ]
         );
-
+        */
+        $album = Album::find($id);
+        $album->album_name = request()->input('name');
+        $album->description = request()->input('description');
+        if($req->hasFile('album_thumb')){
+          $file = $req->file('album_thumb');
+          $fileName = $file->store(env('ALBUM_THUMB_DIR'));
+          $album->album_thumb = $fileName;
+        }
+        $res = $album->save();
         //dd(request()->all());
         /*
         $data = request()->only(['name','description']);
@@ -97,13 +114,21 @@ class AlbumsController extends Controller
 
     public function save(){
 
-      $res = DB::table('albums')->insert(
+      //$res = DB::table('albums')->insert(
+/*
+      $res = Album::create(
         [
           'album_name' => request()->input('name'),
           'description' => request()->input('description'),
           'user_id' => 1
         ]
       );
+      */
+      $album = new Album();
+      $album->album_name = request()->input('name');
+      $album->description = request()->input('description');
+      $album->user_id = 1;
+      $res = $album->save();
 
       /*
       $data = request()->only(['name','description']);

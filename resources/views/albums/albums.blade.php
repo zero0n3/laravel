@@ -1,4 +1,4 @@
-@extends('templates.default');
+@extends('templates.default')
 
 @section('content')
 
@@ -14,7 +14,11 @@
     @foreach ($albums as $album)
 
         <li class="list-group-item justify-content-between">({{$album->id}}) {{$album->album_name}}
+          @if($album->album_thumb)
+            <img width="50" src="{{$album->album_thumb}}" alt="{{$album->album_name}}" title="{{$album->album_name}}">
+          @endif
           <div>
+
             <a href="/albums/{{$album->id}}/edit" class="btn btn-primary">UPDATE</a>
             <a href="/albums/{{$album->id}}" class="btn btn-danger">DELETE</a>
           </div>
