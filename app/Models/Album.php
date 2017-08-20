@@ -13,4 +13,16 @@ class Album extends Model {
     'description',
     'user_id'
   ];
+
+  public function getPathAttribute(){
+    $url = $this->album_thumb;
+    if(stristr($this->album_thumb, 'http') === false){
+      $url = 'storage/' . $this->album_thumb;
+    }
+    return $url;
+  }
+
+  public function photos(){
+    return $this->hasMany(Photo::class);
+  }
 }

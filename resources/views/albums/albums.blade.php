@@ -15,10 +15,13 @@
 
         <li class="list-group-item justify-content-between">({{$album->id}}) {{$album->album_name}}
           @if($album->album_thumb)
-            <img width="50" src="{{$album->album_thumb}}" alt="{{$album->album_name}}" title="{{$album->album_name}}">
+            <img width="50" src="{{asset($album->path)}}" alt="{{$album->album_name}}" title="{{$album->album_name}}">
           @endif
-          <div>
 
+          <div>
+            @if($album->photos_count)
+              <a href="/albums/{{$album->id}}/images" class="btn btn-info">View Images ({{$album->photos_count}})</a>
+            @endif
             <a href="/albums/{{$album->id}}/edit" class="btn btn-primary">UPDATE</a>
             <a href="/albums/{{$album->id}}" class="btn btn-danger">DELETE</a>
           </div>

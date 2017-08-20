@@ -30,9 +30,12 @@ Route::get('/albums','AlbumsController@index')->name('albums');
 Route::get('/albums/{id}','AlbumsController@show')->where('id', '[0-9]+');
 Route::get('/albums/create','AlbumsController@create')->name('album.create');
 Route::get('/albums/{id}/edit','AlbumsController@edit');
-Route::delete('/albums/{id}','AlbumsController@delete');
-Route::patch('/albums/{id}','AlbumsController@store');
+Route::delete('/albums/{album}','AlbumsController@delete')->where('album', '[0-9]+');
+Route::patch('/albums/{id}','AlbumsController@store')->where('id', '[0-9]+');
 Route::post('/albums','AlbumsController@save')->name('album.save');
+Route::get('/albums/{album}/images','AlbumsController@getImages')
+          ->name('album.getimages')
+          ->where('album', '[0-9]+');
 
 Route::get('usersnoalbum',function(){
   $usersnoalbum = DB::table('users as u')
@@ -43,13 +46,7 @@ Route::get('usersnoalbum',function(){
   return $usersnoalbum;
 });
 
-Route::get('/photos',function(Request $res){
-    $q = Photo::select('*');
-
-    if($res::has('album_id')){
-        $photos = $q->where('album_id',$res::get('album_id'))->paginate(20);
-    } else {
-
-    }
+Route::get('photos',function(){
+    return Photo::all();
 
 });
