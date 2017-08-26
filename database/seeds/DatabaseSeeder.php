@@ -1,7 +1,12 @@
 <?php
 
 use App\User;
+use App\Models\Luser;
 use App\Models\Album;
+use App\Models\Lcolor;
+use App\Models\Lpart;
+use App\Models\Ldblego;
+use App\Models\Lcategorie;
 use App\Models\Photo;
 use Illuminate\Database\Seeder;
 
@@ -15,14 +20,25 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+
         User::truncate();
         Album::truncate();
         Photo::truncate();
-
+        Ldblego::truncate();
+        Lpart::truncate();
+        Luser::truncate();
+        Lcolor::truncate();
+        Lcategorie::truncate();
 
         $this->call(SeedUserTable::class);
         $this->call(SeedAlbumTable::class);
         $this->call(SeedPhotoTable::class);
 
+        // LEGO
+        $this->call(SeedLcategorieTable::class);
+        $this->call(SeedLuserTable::class);
+        $this->call(SeedLcolorTable::class);
+        $this->call(SeedLpartTable::class);
+        $this->call(SeedLdblegoTable::class);
     }
 }

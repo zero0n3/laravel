@@ -12,7 +12,8 @@
 */
 use App\Models\Photo;
 
-Route::get('/','HomeController@index');
+//Route::get('/','HomeController@index');
+Route::get('/','AlbumsController@index');
 
 Route::get('welcome/{name?}/{lastname?}/{age?}', 'WelcomeController@welcome')
 
@@ -50,3 +51,6 @@ Route::get('photos',function(){
     return Photo::all();
 
 });
+
+//images
+Route::resource('photos', 'PhotosController');

@@ -15,10 +15,11 @@
 
         <li class="list-group-item justify-content-between">({{$album->id}}) {{$album->album_name}}
           @if($album->album_thumb)
-            <img width="50" src="{{asset($album->path)}}" alt="{{$album->album_name}}" title="{{$album->album_name}}">
+            <img width="50" src="{{asset($album->img_path)}}" alt="{{$album->album_name}}" title="{{$album->album_name}}">
           @endif
 
           <div>
+            <a href="{{route('photos.create')}}?album_id={{$album->id}}" class="btn btn-warning">NEW IMAGE</a>
             @if($album->photos_count)
               <a href="/albums/{{$album->id}}/images" class="btn btn-info">View Images ({{$album->photos_count}})</a>
             @endif
@@ -57,6 +58,7 @@
               '_token': $('#_token').val()
             },
             complete : function(resp){
+
               if (resp.responseText == 1){
                 li.parentNode.removeChild(li);
               } else {

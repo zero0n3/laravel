@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Album;
+
 use Illuminate\Database\Seeder;
 
 class SeedAlbumTable extends Seeder
