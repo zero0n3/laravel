@@ -13,7 +13,7 @@ class Album extends Model {
     'description',
     'user_id'
   ];
-
+//hello
   public function getPathAttribute(){
     $url = $this->album_thumb;
     if(stristr($url, 'http') === false){
