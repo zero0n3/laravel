@@ -15,5 +15,6 @@ class SeedAlbumTable extends Seeder
         //DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         //Album::truncate();
         factory(App\Models\Album::class, 10)->create();
+        
     }
 }
