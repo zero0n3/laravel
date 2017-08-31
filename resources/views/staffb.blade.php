@@ -3,7 +3,7 @@
 
 @section('content')
   <h1>
-    {{$title}}
+    {{$title}}cione
   </h1>
 
 
