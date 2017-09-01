@@ -16,5 +16,6 @@ class SeedAlbumTable extends Seeder
         //Album::truncate();
         factory(App\Models\Album::class, 10)->create();
         
+
     }
 }
