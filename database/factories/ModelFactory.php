@@ -103,3 +103,14 @@ $factory->define(App\Models\Ldblego::class, function (Faker\Generator $faker) {
         'location' => $faker->word()
     ];
 });
+
+/** @var \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Models\Lmoc::class, function (Faker\Generator $faker) {
+    return [
+        'namemoc' => 'ciaone',
+        'user_id' => 1,
+        'part' => Lpart::inRandomOrder()->first()->part_num,
+        'color' => Lcolor::inRandomOrder()->first()->col_num,
+        'quantity' => $faker->randomDigit(),
+    ];
+});

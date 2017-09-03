@@ -27,6 +27,11 @@ Route::get('welcome/{name?}/{lastname?}/{age?}', 'WelcomeController@welcome')
     'age' => '[0-9]{1,3}'
   ]);
 
+//lego
+  Route::get('/moc','LegosController@index');
+//fine lego
+
+
 Route::get('/albums','AlbumsController@index')->name('albums');
 Route::get('/albums/{id}','AlbumsController@show')->where('id', '[0-9]+');
 Route::get('/albums/create','AlbumsController@create')->name('album.create');

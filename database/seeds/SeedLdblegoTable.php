@@ -15,7 +15,7 @@ class SeedLdblegoTable extends Seeder
       $lusers = Luser::get();
 
       foreach ($lusers as $luser) {
-          factory(App\Models\Ldblego::class, 15)->create(
+          factory(App\Models\Ldblego::class, 10)->create(
               ['user_id' => $luser->id]
           );
       }

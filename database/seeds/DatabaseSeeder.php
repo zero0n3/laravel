@@ -6,6 +6,7 @@ use App\Models\Album;
 use App\Models\Lcolor;
 use App\Models\Lpart;
 use App\Models\Ldblego;
+use App\Models\Lmoc;
 use App\Models\Lcategorie;
 use App\Models\Photo;
 use Illuminate\Database\Seeder;
@@ -29,6 +30,7 @@ class DatabaseSeeder extends Seeder
         Luser::truncate();
         Lcolor::truncate();
         Lcategorie::truncate();
+        Lmoc::truncate();
 
         $this->call(SeedUserTable::class);
         $this->call(SeedAlbumTable::class);
@@ -40,5 +42,6 @@ class DatabaseSeeder extends Seeder
         $this->call(SeedLcolorTable::class);
         $this->call(SeedLpartTable::class);
         $this->call(SeedLdblegoTable::class);
+        $this->call(SeedLmocTable::class);
     }
 }
