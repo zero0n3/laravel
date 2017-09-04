@@ -26,7 +26,7 @@ class LegosController extends Controller
                       ->whereRaw('lmocs.color = ldblegos.color');
                 });
                 
-        // 2
+        // PEZZI CHE SONO NEL MIO DB MA NON NE HO ABBASTANZA - QUI IMPOSTO LA DIFFERENZA DA COMPRARE
         $queryBuilder_2 = Lmoc::join('lparts', 'lmocs.part', '=', 'lparts.part_num' );
         $queryBuilder_2->join('lcolors', 'lmocs.color', '=', 'lcolors.col_num');
         $queryBuilder_2->join('ldblegos', 'lmocs.part', '=', 'ldblegos.part');
