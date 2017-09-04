@@ -88,7 +88,7 @@ $factory->define(App\Models\Lpart::class, function (Faker\Generator $faker) {
     return [
         'part_num' => $faker->unique()->numberBetween(3023,4000),
         'description' => $faker->text(128),
-        'cat_id' => Lcategorie::inRandomOrder()->first()->cat_num,
+        //'cat_id' => Lcategorie::inRandomOrder()->first()->cat_num,
     ];
 });
 

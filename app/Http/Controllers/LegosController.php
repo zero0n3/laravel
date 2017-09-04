@@ -13,7 +13,7 @@ class LegosController extends Controller
         //return 'Hello MOC';
 
         //$queryBuilder = DB::table('albums')->orderBy('id','desc');
-        
+       
         //$queryBuilder = Lmoc::join('lcolors', 'lmocs.color', '=', 'lcolors.col_num')->orderBy('lmocs.id','asc');
         
         //  PEZZI CHE NON SONO NEL MIO DB - DA COMPRARE TUTTI
@@ -37,8 +37,8 @@ class LegosController extends Controller
             $join->on('lmocs.color', '=', 'ldblegos.color');
         });
         
-        //$queryBuilder_2->where('lmocs.quantity - ldblegos.quantity', '>', 0);
-        $queryBuilder_2->whereRaw('lmocs.quantity - ldblegos.quantity > 0');
+        $queryBuilder_2->where('lmocs.quantity', '>', 0);
+        //$queryBuilder_2->whereRaw('lmocs.quantity - ldblegos.quantity >= 0');
         
 /*
         if($request->has('id')){
@@ -50,7 +50,7 @@ class LegosController extends Controller
         }
 */
         $mocs = $queryBuilder_2->orderBy('lmocs.id','asc')->get();
-        dd($mocs);
+        //dd($mocs);
         return view('lego.moc', ['mocs' => $mocs]);
 
         /*$sql = 'select * from albums WHERE 1=1 ';

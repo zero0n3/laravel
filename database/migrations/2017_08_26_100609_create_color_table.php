@@ -18,7 +18,7 @@ class CreateColorTable extends Migration
             $table->integer('col_num')->unsigned()->unique();
             $table->string('color_name',128);
             $table->string('rgb',6);
-            $table->boolean('trasp');
+            $table->string('trasp',4);
             $table->softDeletes();
             $table->timestamps();
         });

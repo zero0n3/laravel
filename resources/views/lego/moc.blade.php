@@ -20,7 +20,7 @@
       <tr>
         <td>{{$moc->namemoc}}</td>
         <td>{{$moc->part}}</td>
-        <td>{{$moc->color_name}}</td>
+        <td>{{$moc->color}}</td>
         <td>{{$moc->quantity}}</td>
       </tr>
     @empty
