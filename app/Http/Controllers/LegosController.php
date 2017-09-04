@@ -29,9 +29,17 @@ class LegosController extends Controller
         // PEZZI CHE SONO NEL MIO DB MA NON NE HO ABBASTANZA - QUI IMPOSTO LA DIFFERENZA DA COMPRARE
         $queryBuilder_2 = Lmoc::join('lparts', 'lmocs.part', '=', 'lparts.part_num' );
         $queryBuilder_2->join('lcolors', 'lmocs.color', '=', 'lcolors.col_num');
-        $queryBuilder_2->join('ldblegos', 'lmocs.part', '=', 'ldblegos.part');
+        
+        //$queryBuilder_2->join('ldblegos', 'lmocs.part', '=', 'ldblegos.part');
         //$queryBuilder_2->join('ldblegos', 'lmocs.color', '=', 'ldblegos.color');
-        $queryBuilder_2->where('lmocs.quantity - ldblegos.quantity', '>', 0);
+        $queryBuilder_2->join('ldblegos', function($join) {
+            $join->on('lmocs.part', '=', 'ldblegos.part');
+            $join->on('lmocs.color', '=', 'ldblegos.color');
+        });
+        
+        //$queryBuilder_2->where('lmocs.quantity - ldblegos.quantity', '>', 0);
+        $queryBuilder_2->whereRaw('lmocs.quantity - ldblegos.quantity > 0');
+        
 /*
         if($request->has('id')){
             $queryBuilder->where('ID','=', $request->input('id'));
@@ -42,7 +50,7 @@ class LegosController extends Controller
         }
 */
         $mocs = $queryBuilder_2->orderBy('lmocs.id','asc')->get();
-
+        dd($mocs);
         return view('lego.moc', ['mocs' => $mocs]);
 
         /*$sql = 'select * from albums WHERE 1=1 ';
