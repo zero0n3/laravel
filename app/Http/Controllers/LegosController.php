@@ -15,6 +15,18 @@ class LegosController extends Controller
         //$queryBuilder = DB::table('albums')->orderBy('id','desc');
         
         $queryBuilder = Lmoc::join('lcolors', 'lmocs.color', '=', 'lcolors.col_num')->orderBy('lmocs.id','asc');
+        
+        //  PEZZI CHE NON SONO NEL MIO DB - DA COMPRARE TUTTI
+        $queryBuilder = Lmoc::join('lparts', 'lmoc.part', '=', 'lparts.part_num' );
+        $queryBuilder->join('lcolors', 'lmocs.color', '=', 'lcolors.col_num');
+        $queryBuilder->whereNotExists(function ($query) {
+				$query->select(DB::raw(1))
+					  ->from('ldblegos')
+					  ->where([
+						      ['lmoc.part', '=', 'ldblegos.part'],
+							  ['lmoc.color', '=', 'ldblegos.color']
+						]);
+				});
 /*
         if($request->has('id')){
             $queryBuilder->where('ID','=', $request->input('id'));
