@@ -14,19 +14,24 @@ class LegosController extends Controller
 
         //$queryBuilder = DB::table('albums')->orderBy('id','desc');
         
-        $queryBuilder = Lmoc::join('lcolors', 'lmocs.color', '=', 'lcolors.col_num')->orderBy('lmocs.id','asc');
+        //$queryBuilder = Lmoc::join('lcolors', 'lmocs.color', '=', 'lcolors.col_num')->orderBy('lmocs.id','asc');
         
         //  PEZZI CHE NON SONO NEL MIO DB - DA COMPRARE TUTTI
-        $queryBuilder = Lmoc::join('lparts', 'lmoc.part', '=', 'lparts.part_num' );
-        $queryBuilder->join('lcolors', 'lmocs.color', '=', 'lcolors.col_num');
-        $queryBuilder->whereNotExists(function ($query) {
+        $queryBuilder_1 = Lmoc::join('lparts', 'lmocs.part', '=', 'lparts.part_num' );
+        $queryBuilder_1->join('lcolors', 'lmocs.color', '=', 'lcolors.col_num');
+        $queryBuilder_1->whereNotExists(function ($query) {
 				$query->select(DB::raw(1))
-					  ->from('ldblegos')
-					  ->where([
-						      ['lmoc.part', '=', 'ldblegos.part'],
-							  ['lmoc.color', '=', 'ldblegos.color']
-						]);
-				});
+                      ->from('ldblegos')
+                      ->whereRaw('lmocs.part = ldblegos.part')
+                      ->whereRaw('lmocs.color = ldblegos.color');
+                });
+                
+        // 2
+        $queryBuilder_2 = Lmoc::join('lparts', 'lmocs.part', '=', 'lparts.part_num' );
+        $queryBuilder_2->join('lcolors', 'lmocs.color', '=', 'lcolors.col_num');
+        $queryBuilder_2->join('ldblegos', 'lmocs.part', '=', 'ldblegos.part');
+        //$queryBuilder_2->join('ldblegos', 'lmocs.color', '=', 'ldblegos.color');
+        $queryBuilder_2->where('lmocs.quantity - ldblegos.quantity', '>', 0);
 /*
         if($request->has('id')){
             $queryBuilder->where('ID','=', $request->input('id'));
@@ -36,7 +41,7 @@ class LegosController extends Controller
             $queryBuilder->where('album_name','like', '%'.$request->input('album_name').'%');
         }
 */
-        $mocs = $queryBuilder->get();
+        $mocs = $queryBuilder_2->orderBy('lmocs.id','asc')->get();
 
         return view('lego.moc', ['mocs' => $mocs]);
 
