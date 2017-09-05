@@ -25,23 +25,23 @@ class DatabaseSeeder extends Seeder
         User::truncate();
         Album::truncate();
         Photo::truncate();
-        Ldblego::truncate();
-        Lpart::truncate();
-        Luser::truncate();
-        Lcolor::truncate();
-        Lcategorie::truncate();
-        Lmoc::truncate();
+        //Ldblego::truncate();
+        //Lpart::truncate();
+        //Luser::truncate();
+        //Lcolor::truncate();
+        //Lcategorie::truncate();
+        //Lmoc::truncate();
 
         $this->call(SeedUserTable::class);
         $this->call(SeedAlbumTable::class);
         $this->call(SeedPhotoTable::class);
 
         // LEGO
-        $this->call(SeedLcategorieTable::class);
-        $this->call(SeedLuserTable::class);
-        $this->call(SeedLcolorTable::class);
-        $this->call(SeedLpartTable::class);
-        $this->call(SeedLdblegoTable::class);
-        $this->call(SeedLmocTable::class);
+        //$this->call(SeedLcategorieTable::class);
+        //$this->call(SeedLuserTable::class);
+        //$this->call(SeedLcolorTable::class);
+        //$this->call(SeedLpartTable::class);
+        //$this->call(SeedLdblegoTable::class);
+        //$this->call(SeedLmocTable::class);
     }
 }
