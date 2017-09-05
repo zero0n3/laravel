@@ -31,8 +31,6 @@ class CreateDblegoTable extends Migration
             $table->unique(array('user_id', 'part', 'color'));
             //QUANTITY
             $table->integer('quantity')->unsigned();
-            //LOCATION
-            $table->string('location',128);
             //time
             $table->softDeletes();
             $table->timestamps();
