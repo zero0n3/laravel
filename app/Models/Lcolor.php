@@ -7,4 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class Lcolor extends Model
 {
     protected $table = 'lcolors';
+    protected $primaryKey = 'id';
 }

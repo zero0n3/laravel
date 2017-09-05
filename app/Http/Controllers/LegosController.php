@@ -27,7 +27,9 @@ class LegosController extends Controller
                 });
                 
         // PEZZI CHE SONO NEL MIO DB MA NON NE HO ABBASTANZA - QUI IMPOSTO LA DIFFERENZA DA COMPRARE
-        $queryBuilder_2 = Lmoc::join('lparts', 'lmocs.part', '=', 'lparts.part_num' );
+        /*$queryBuilder_2 = DB::table('lmocs')->select('namemoc', 'lmocs.part', 'lmocs.color');
+        $queryBuilder_2->select(DB::raw('(lmocs.quantity - ldblegos.quantity) as quantita'));
+        $queryBuilder_2->join('lparts', 'lmocs.part', '=', 'lparts.part_num' );
         $queryBuilder_2->join('lcolors', 'lmocs.color', '=', 'lcolors.col_num');
         
         //$queryBuilder_2->join('ldblegos', 'lmocs.part', '=', 'ldblegos.part');
@@ -36,11 +38,23 @@ class LegosController extends Controller
             $join->on('lmocs.part', '=', 'ldblegos.part');
             $join->on('lmocs.color', '=', 'ldblegos.color');
         });
-        
-        $queryBuilder_2->where('lmocs.quantity', '>', 0);
-        //$queryBuilder_2->whereRaw('lmocs.quantity - ldblegos.quantity >= 0');
-        
-/*
+        */
+        $queryBuilder_2 = DB::table('lmocs')
+        ->join('ldblegos', function($join) {
+            $join->on('lmocs.part', '=', 'ldblegos.part');
+            $join->on('lmocs.color', '=', 'ldblegos.color');
+        })
+        ->selectRaw('lmocs.namemoc, lmocs.part, lmocs.color, (lmocs.quantity - ldblegos.quantity) as quantity')
+        ->whereRaw('(lmocs.quantity - ldblegos.quantity) >= 0')
+        ->get();
+        /*
+        $queryBuilder_2 = DB::table('lmocs')->select(DB::raw('lmocs.namemoc, lmocs.part, lmocs.color, (lmocs.quantity - ldblegos.quantity) as quantita
+        FROM lmocs
+        JOIN ldblegos
+        ON lmocs.part = ldblegos.part AND lmocs.color = ldblegos.color
+        '));
+        */
+        /*
         if($request->has('id')){
             $queryBuilder->where('ID','=', $request->input('id'));
         }
@@ -48,8 +62,8 @@ class LegosController extends Controller
         if($request->has('album_name')){
             $queryBuilder->where('album_name','like', '%'.$request->input('album_name').'%');
         }
-*/
-        $mocs = $queryBuilder_2->orderBy('lmocs.id','asc')->get();
+        */
+        $mocs = $queryBuilder_2;/*orderBy('lmocs.part','asc')->get();*/
         //dd($mocs);
         return view('lego.moc', ['mocs' => $mocs]);
 

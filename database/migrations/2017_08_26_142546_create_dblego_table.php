@@ -30,7 +30,7 @@ class CreateDblegoTable extends Migration
             //UNIQUE
             $table->unique(array('user_id', 'part', 'color'));
             //QUANTITY
-            $table->integer('quantity')->unsigned();
+            $table->integer('quantity');
             //time
             $table->softDeletes();
             $table->timestamps();

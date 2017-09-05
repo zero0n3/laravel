@@ -30,7 +30,7 @@ class CreateMocTable extends Migration
             //UNIQUE FIELDS
             $table->unique(array('user_id', 'part', 'color'));
             //QUANTITY
-            $table->integer('quantity')->unsigned();
+            $table->integer('quantity');
             //times
             $table->softDeletes();
             $table->timestamps();
