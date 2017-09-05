@@ -17,8 +17,8 @@ class CreatePartsTable extends Migration
             $table->increments('id');
             $table->string('part_num',20)->unique();
             $table->string('description',128);
-            //$table->integer('cat_id')->unsigned();
-            //$table->foreign('cat_id')->on('lcategories')->references('cat_num')->onUpdate('cascade');
+            $table->integer('cat_id')->unsigned();
+            $table->foreign('cat_id')->on('lcategories')->references('cat_num')->onUpdate('cascade');
             $table->softDeletes();
             $table->timestamps();
         });
