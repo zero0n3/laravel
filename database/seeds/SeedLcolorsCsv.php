@@ -4,12 +4,12 @@ use App\Models\Luser;
 use Illuminate\Database\Seeder;
 use Flynsarmy\CsvSeeder\CsvSeeder;
 
-class SeedLmocCsv extends CsvSeeder {
+class SeedLcolorCsv extends CsvSeeder {
 
 	public function __construct()
 	{
-		$this->table = 'lmocs';
-		$this->filename = base_path().'/database/csvs/lmocs.csv';
+		$this->table = 'lcolors';
+		$this->filename = base_path().'/database/csvs/lcolors.csv';
 	}
 
 	public function run()
