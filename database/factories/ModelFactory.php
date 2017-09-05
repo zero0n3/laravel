@@ -99,8 +99,7 @@ $factory->define(App\Models\Ldblego::class, function (Faker\Generator $faker) {
         'user_id' => 1,
         'part' => Lpart::inRandomOrder()->first()->part_num,
         'color' => Lcolor::inRandomOrder()->first()->col_num,
-        'quantity' => $faker->randomDigit(),
-        'location' => $faker->word()
+        'quantity' => $faker->randomDigit()
     ];
 });
 
