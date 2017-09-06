@@ -84,14 +84,14 @@ FROM   lmocs
              ON 0_colors.color_num = lmocs.Color
            JOIN 0_cassettiera 
              ON 0_cassettiera.part = lmocs.Part
-WHERE  lmocs.Quantity - ldblegos.Quantity <= 0 AND lmocs.Part NOT IN (
-								SELECT DISTINCT lmocs.Part
+WHERE  lmocs.quantity - ldblegos.quantity <= 0 AND lmocs.part NOT IN (
+								SELECT DISTINCT lmocs.part
 								FROM lmocs
-								JOIN ldblegos ON lmocs.Part = ldblegos.Part 
+								JOIN ldblegos ON lmocs.part = ldblegos.part 
 								WHERE NOT EXISTS (
 									SELECT 1
 									FROM ldblegos 
-									WHERE lmocs.Part = ldblegos.Part AND lmocs.Color = ldblegos.Color))
+									WHERE lmocs.part = ldblegos.part AND lmocs.color = ldblegos.color))
 								
 --	UNION;
 --	3b	PEZZI CHE SONO NEL MIO DB E NE HO ABBASTANZA E HANNO UN CODICE UGUALE A QUELLI CHE ORDINO PER CUI DEVO TENERLI DA PARTE PRIMA DI CHUDERE I SACCHETTI;

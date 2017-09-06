@@ -17,7 +17,8 @@ class LegosController extends Controller
         //$queryBuilder = Lmoc::join('lcolors', 'lmocs.color', '=', 'lcolors.col_num')->orderBy('lmocs.id','asc');
         
         //  1 - PEZZI CHE NON SONO NEL MIO DB - DA COMPRARE TUTTI
-        $queryBuilder_1 = Lmoc::join('lparts', 'lmocs.part', '=', 'lparts.part_num' )
+        $queryBuilder_1 = Lmoc::selectRaw('lmocs.namemoc, lmocs.part, lmocs.color, lmocs.quantity')
+        ->join('lparts', 'lmocs.part', '=', 'lparts.part_num' )
         ->join('lcolors', 'lmocs.color', '=', 'lcolors.col_num')
         ->whereNotExists(function ($query) {
 				$query->select(DB::raw(1))
@@ -29,7 +30,7 @@ class LegosController extends Controller
 
 
         //  2a - PEZZI CHE SONO NEL MIO DB MA NON NE HO ABBASTANZA - QUI IMPOSTO LA DIFFERENZA DA COMPRARE
-        $queryBuilder_2a = Lmoc::select('lmocs.namemoc, lmocs.part, lmocs.color, (lmocs.quantity - ldblegos.quantity) as quantity')
+        $queryBuilder_2a = Lmoc::selectRaw('lmocs.namemoc, lmocs.part, lmocs.color, (lmocs.quantity - ldblegos.quantity) as quantity')
         ->join('ldblegos', function($join) {
             $join->on('lmocs.part', '=', 'ldblegos.part');
             $join->on('lmocs.color', '=', 'ldblegos.color');
@@ -39,55 +40,51 @@ class LegosController extends Controller
 	
 
 	
-	//  2b - PEZZI CHE SONO NEL MIO DB MA NON NE HO ABBASTANZA - QUI IMPOSTO LA QUANTITA' DEL MIO DB CHE ANDRò AD AZZERARE QUINDI
-	$queryBuilder_2b = Lmoc::select('lmocs.namemoc', DB::raw('concat(lmocs.part, " ***") AS part'), lmocs.color, ldblegos.quantity)
-	->join('ldblegos', function($join) {
-		$join->on('lmocs.part', '=', 'ldblegos.part');
-		$join->on('lmocs.color', '=', 'ldblegos.color');
-		})
-	->whereRaw('(lmocs.quantity - ldblegos.quantity) > 0');
-	
-	
-	
-	//	3a - PEZZI CHE SONO NEL MIO DB E NE HO ABBASTANZA MA NON SONO NEI PEZZI DA ORDINE - PEZZI UNICI CON SACCHETTO DEDICATO
-	$queryBuilder_3a = Lmoc::select('lmocs.namemoc, lmocs.part, lmocs.color, lmocs.quantity')
-	->join('ldblegos', function($join) {
+        //  2b - PEZZI CHE SONO NEL MIO DB MA NON NE HO ABBASTANZA - QUI IMPOSTO LA QUANTITA' DEL MIO DB CHE ANDRò AD AZZERARE QUINDI
+        $queryBuilder_2b = Lmoc::selectRaw('lmocs.namemoc, concat(lmocs.part, " ***") AS part, lmocs.color, ldblegos.quantity')
+        ->join('ldblegos', function($join) {
             $join->on('lmocs.part', '=', 'ldblegos.part');
             $join->on('lmocs.color', '=', 'ldblegos.color');
-        })
-	->whereRaw('(lmocs.quantity - ldblegos.quantity) <= 0')
-	->whereNotIn('lmocs.Part', function($notin) {
-		$notin->select('lmocs.part')->distinct()
-		  ->join('ldblegos', 'lmocs.part', '=', 'ldblegos.part' )
-		  ->whereNotExists(function ($query) {
-			$query->select(DB::raw(1))
-			->from('ldblegos')
-			->whereRaw('lmocs.part = ldblegos.part')
-			->whereRaw('lmocs.color = ldblegos.color');
-		  });
-        });
-	
-	
-	
-	
-	//	3b - PEZZI CHE SONO NEL MIO DB E NE HO ABBASTANZA E HANNO UN CODICE UGUALE A QUELLI CHE ORDINO PER CUI DEVO TENERLI DA PARTE PRIMA DI CHUDERE I SACCHETTI
-	$queryBuilder_3b = Lmoc::select('lmocs.namemoc, DB::raw('concat(lmocs.part, " ***") AS part'), lmocs.color, lmocs.quantity')
-	->join('ldblegos', function($join) {
-            $join->on('lmocs.part', '=', 'ldblegos.part');
-            $join->on('lmocs.color', '=', 'ldblegos.color');
-        })
-	->whereRaw('(lmocs.quantity - ldblegos.quantity) <= 0')
-	->whereIn('lmocs.Part', function($notin) {
-		$notin->select('lmocs.part')->distinct()
-		->join('ldblegos', 'lmocs.part', '=', 'ldblegos.part' )
-		->whereNotExists(function ($query) {
-			$query->select(DB::raw(1))
-			->from('ldblegos')
-			->whereRaw('lmocs.part = ldblegos.part')
-			->whereRaw('lmocs.color = ldblegos.color');
-		  });
-        });
-	
+            })
+        ->whereRaw('(lmocs.quantity - ldblegos.quantity) > 0');
+        
+        
+        
+        //	3a - PEZZI CHE SONO NEL MIO DB E NE HO ABBASTANZA MA NON SONO NEI PEZZI DA ORDINE - PEZZI UNICI CON SACCHETTO DEDICATO
+        $queryBuilder_3a = Lmoc::selectRaw('lmocs.namemoc, lmocs.part, lmocs.color, lmocs.quantity')
+        ->join('ldblegos', function($join) {
+                $join->on('lmocs.part', '=', 'ldblegos.part');
+                $join->on('lmocs.color', '=', 'ldblegos.color');
+            })
+            ->whereRaw('(lmocs.quantity - ldblegos.quantity) <= 0 AND
+            lmocs.part NOT IN (
+                SELECT DISTINCT lmocs.part
+                FROM lmocs
+                JOIN ldblegos ON lmocs.part = ldblegos.part 
+                WHERE NOT EXISTS (SELECT 1
+                    FROM ldblegos 
+                    WHERE lmocs.part = ldblegos.part AND lmocs.color = ldblegos.color)
+            )');
+        
+        
+        
+        
+        //	3b - PEZZI CHE SONO NEL MIO DB E NE HO ABBASTANZA E HANNO UN CODICE UGUALE A QUELLI CHE ORDINO PER CUI DEVO TENERLI DA PARTE PRIMA DI CHUDERE I SACCHETTI
+        $queryBuilder_3b = Lmoc::selectRaw('lmocs.namemoc, concat(lmocs.part, " ***") AS part, lmocs.color, lmocs.quantity')
+        ->join('ldblegos', function($join) {
+                $join->on('lmocs.part', '=', 'ldblegos.part');
+                $join->on('lmocs.color', '=', 'ldblegos.color');
+            })
+            ->whereRaw('(lmocs.quantity - ldblegos.quantity) <= 0 AND
+            lmocs.part IN (
+                SELECT DISTINCT lmocs.part
+                FROM lmocs
+                JOIN ldblegos ON lmocs.part = ldblegos.part 
+                WHERE NOT EXISTS (SELECT 1
+                    FROM ldblegos 
+                    WHERE lmocs.part = ldblegos.part AND lmocs.color = ldblegos.color)
+            )');
+        
 	
 	
 	
@@ -104,7 +101,12 @@ class LegosController extends Controller
 		
 
 
-	$mocs = $queryBuilder_2->orderBy('lmocs.part','asc')->get();
+        $mocs = $queryBuilder_1
+        ->union($queryBuilder_2a)
+        ->union($queryBuilder_2b)
+        ->union($queryBuilder_3a)
+        ->union($queryBuilder_3b)
+        ->orderBy('part','asc')->get();
         //dd($mocs);
         return view('lego.moc', ['mocs' => $mocs]);
 
