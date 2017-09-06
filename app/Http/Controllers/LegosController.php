@@ -17,7 +17,7 @@ class LegosController extends Controller
         //$queryBuilder = Lmoc::join('lcolors', 'lmocs.color', '=', 'lcolors.col_num')->orderBy('lmocs.id','asc');
         
         //  1 - PEZZI CHE NON SONO NEL MIO DB - DA COMPRARE TUTTI
-        $queryBuilder_1 = Lmoc::selectRaw('lmocs.namemoc, lmocs.part, lmocs.color, lmocs.quantity')
+        $queryBuilder_1 = Lmoc::selectRaw('lmocs.namemoc, concat("1- ", lmocs.part) AS part, lmocs.color, lmocs.quantity')
         ->join('lparts', 'lmocs.part', '=', 'lparts.part_num' )
         ->join('lcolors', 'lmocs.color', '=', 'lcolors.col_num')
         ->whereNotExists(function ($query) {
@@ -30,7 +30,7 @@ class LegosController extends Controller
 
 
         //  2a - PEZZI CHE SONO NEL MIO DB MA NON NE HO ABBASTANZA - QUI IMPOSTO LA DIFFERENZA DA COMPRARE
-        $queryBuilder_2a = Lmoc::selectRaw('lmocs.namemoc, lmocs.part, lmocs.color, (lmocs.quantity - ldblegos.quantity) as quantity')
+        $queryBuilder_2a = Lmoc::selectRaw('lmocs.namemoc, concat("2a- ", lmocs.part) AS part, lmocs.color, (lmocs.quantity - ldblegos.quantity) as quantity')
         ->join('ldblegos', function($join) {
             $join->on('lmocs.part', '=', 'ldblegos.part');
             $join->on('lmocs.color', '=', 'ldblegos.color');
@@ -41,7 +41,7 @@ class LegosController extends Controller
 
 	
         //  2b - PEZZI CHE SONO NEL MIO DB MA NON NE HO ABBASTANZA - QUI IMPOSTO LA QUANTITA' DEL MIO DB CHE ANDRò AD AZZERARE QUINDI
-        $queryBuilder_2b = Lmoc::selectRaw('lmocs.namemoc, concat(lmocs.part, " ***") AS part, lmocs.color, ldblegos.quantity')
+        $queryBuilder_2b = Lmoc::selectRaw('lmocs.namemoc, concat("2b- ", lmocs.part, " ***") AS part, lmocs.color, ldblegos.quantity')
         ->join('ldblegos', function($join) {
             $join->on('lmocs.part', '=', 'ldblegos.part');
             $join->on('lmocs.color', '=', 'ldblegos.color');
@@ -51,7 +51,7 @@ class LegosController extends Controller
         
         
         //	3a - PEZZI CHE SONO NEL MIO DB E NE HO ABBASTANZA MA NON SONO NEI PEZZI DA ORDINE - PEZZI UNICI CON SACCHETTO DEDICATO
-        $queryBuilder_3a = Lmoc::selectRaw('lmocs.namemoc, lmocs.part, lmocs.color, lmocs.quantity')
+        $queryBuilder_3a = Lmoc::selectRaw('lmocs.namemoc, concat("3a- ", lmocs.part) AS part, lmocs.color, lmocs.quantity')
         ->join('ldblegos', function($join) {
                 $join->on('lmocs.part', '=', 'ldblegos.part');
                 $join->on('lmocs.color', '=', 'ldblegos.color');
@@ -70,7 +70,7 @@ class LegosController extends Controller
         
         
         //	3b - PEZZI CHE SONO NEL MIO DB E NE HO ABBASTANZA E HANNO UN CODICE UGUALE A QUELLI CHE ORDINO PER CUI DEVO TENERLI DA PARTE PRIMA DI CHUDERE I SACCHETTI
-        $queryBuilder_3b = Lmoc::selectRaw('lmocs.namemoc, concat(lmocs.part, " ***") AS part, lmocs.color, lmocs.quantity')
+        $queryBuilder_3b = Lmoc::selectRaw('lmocs.namemoc, concat("3b- ", lmocs.part, " ***") AS part, lmocs.color, lmocs.quantity')
         ->join('ldblegos', function($join) {
                 $join->on('lmocs.part', '=', 'ldblegos.part');
                 $join->on('lmocs.color', '=', 'ldblegos.color');
