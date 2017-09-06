@@ -1,5 +1,5 @@
 --  sql di testo.php con 4 UNION;
---	PEZZI CHE NON SONO NEL MIO DB - DA COMPRARE TUTTI;
+--	1	PEZZI CHE NON SONO NEL MIO DB - DA COMPRARE TUTTI;
 SELECT lmocs.Part     AS Part, 
        0_desc_parts.nome  AS DESCR, 
        0_colors.nome      AS Color, 
@@ -18,7 +18,7 @@ WHERE  ( NOT ( EXISTS ( SELECT 1
 
 
 --	UNION;
---	PEZZI CHE SONO NEL MIO DB MA NON NE HO ABBASTANZA - QUI IMPOSTO LA DIFFERENZA DA COMPRARE;
+--	2a	PEZZI CHE SONO NEL MIO DB MA NON NE HO ABBASTANZA - QUI IMPOSTO LA DIFFERENZA DA COMPRARE;
 UNION 
 
 
@@ -40,7 +40,31 @@ WHERE  ( ( lmocs.Quantity - ldblegos.Quantity ) > 0 )
 
 
 --	UNION;
---	PEZZI CHE SONO NEL MIO DB E NE HO ABBASTANZA MA NON SONO NEI PEZZI DA ORDINE - PEZZI UNICI CON SACCHETTO DEDICATO;
+--	2b	PEZZI CHE SONO NEL MIO DB E NON NE HO ABBASTANZA - QUI IMPOSTO LA QUANTITA' DEL MIO DB CHE ANDRò AD AZZERARE QUINDI;
+UNION 
+
+
+SELECT Concat(lmocs.Part, ' ***') AS Part, 
+       0_desc_parts.nome              AS DESCR, 
+       0_colors.nome                  AS Color, 
+       0_colors.rgb                   AS rgb, 
+       ldblegos.Quantity           AS Quantity, 
+       0_cassettiera.cas              AS CAS 
+FROM   ( ( ( ( lmocs 
+           JOIN ldblegos 
+             ON ( ( ( lmocs.Part = ldblegos.Part ) 
+             AND ( lmocs.Color = ldblegos.Color ) ) ) ) 
+		   JOIN 0_desc_parts 
+			 ON ( ( 0_desc_parts.part_num = lmocs.Part ) ) ) 
+		   JOIN 0_colors 
+			 ON ( ( 0_colors.color_num = lmocs.Color ) ) ) 
+		   JOIN 0_cassettiera 
+			 ON ( ( 0_cassettiera.part = lmocs.Part ) ) ) 
+WHERE  ( ( lmocs.Quantity - ldblegos.Quantity ) > 0 ) 
+
+
+--	UNION;
+--	3a	PEZZI CHE SONO NEL MIO DB E NE HO ABBASTANZA MA NON SONO NEI PEZZI DA ORDINE - PEZZI UNICI CON SACCHETTO DEDICATO;
 UNION 
 
 	
@@ -70,7 +94,7 @@ WHERE  lmocs.Quantity - ldblegos.Quantity <= 0 AND lmocs.Part NOT IN (
 									WHERE lmocs.Part = ldblegos.Part AND lmocs.Color = ldblegos.Color))
 								
 --	UNION;
---	PEZZI CHE SONO NEL MIO DB E NE HO ABBASTANZA E HANNO UN CODICE UGUALE A QUELLI CHE ORDINO PER CUI DEVO TENERLI DA PARTE PRIMA DI CHUDERE I SACCHETTI;
+--	3b	PEZZI CHE SONO NEL MIO DB E NE HO ABBASTANZA E HANNO UN CODICE UGUALE A QUELLI CHE ORDINO PER CUI DEVO TENERLI DA PARTE PRIMA DI CHUDERE I SACCHETTI;
 UNION
 
 SELECT Concat(lmocs.Part, ' ***')    AS Part, 
@@ -99,32 +123,6 @@ WHERE  lmocs.Quantity - ldblegos.Quantity <= 0 AND lmocs.Part IN (
 									WHERE lmocs.Part = ldblegos.Part AND lmocs.Color = ldblegos.Color))	
 	
 	
-	
-	
-	
-
---	UNION;
---	PEZZI CHE SONO NEL MIO DB E NON NE HO ABBASTANZA - QUI IMPOSTO LA QUANTITA' DEL MIO DB CHE ANDRò AD AZZERARE QUINDI;
-UNION 
-
-
-SELECT Concat(lmocs.Part, ' ***') AS Part, 
-       0_desc_parts.nome              AS DESCR, 
-       0_colors.nome                  AS Color, 
-       0_colors.rgb                   AS rgb, 
-       ldblegos.Quantity           AS Quantity, 
-       0_cassettiera.cas              AS CAS 
-FROM   ( ( ( ( lmocs 
-           JOIN ldblegos 
-             ON ( ( ( lmocs.Part = ldblegos.Part ) 
-             AND ( lmocs.Color = ldblegos.Color ) ) ) ) 
-		   JOIN 0_desc_parts 
-			 ON ( ( 0_desc_parts.part_num = lmocs.Part ) ) ) 
-		   JOIN 0_colors 
-			 ON ( ( 0_colors.color_num = lmocs.Color ) ) ) 
-		   JOIN 0_cassettiera 
-			 ON ( ( 0_cassettiera.part = lmocs.Part ) ) ) 
-WHERE  ( ( lmocs.Quantity - ldblegos.Quantity ) > 0 ) 
 
 
 --	ORDER BY;
