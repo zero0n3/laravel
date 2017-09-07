@@ -1,3 +1,24 @@
+<?php use GuzzleHttp\Client; 
+
+      $client = new Client();
+      $res = $client->request('GET', 'http://rebrickable.com/api/v3/lego/parts/3001/colors/4/?key=BzyyfQneul');
+      echo $res->getBody();
+/*
+        $client = new Client(['base_uri' => 'http://rebrickable.com/api/v3/lego/']);
+	      $response = $client->get('parts/3001/colors/4/?key=BzyyfQneul');
+        $data = $response->getBody();
+        $data = json_decode($data, true);
+        dd($data);
+*/
+        
+        //dd($data['part_img_url']);
+
+
+
+//print_r($data['part_img_url']);
+            
+            //<img src="{{$data['part_img_url']}}">?>
+
 @extends('templates.default')
 
 @section('content')
@@ -11,17 +32,27 @@
 
   <table class="table table-striped">
     <tr>
-      <th>MOC NAME</th>
       <th>PART</th>
+      <th>DESCRIPTION</th>
+      <th>IMG 1</th>
+      <th>WHERE</th>
+      <th>QTA</th>
       <th>COLOR</th>
-      <th>QUANTITY</th>
+      <th>PEER1</th>
+      <th>API</th>
+      <th>X</th>
     </tr>
     @forelse ($mocs as $moc)
       <tr>
-        <td>{{$moc->namemoc}}</td>
         <td>{{$moc->part}}</td>
-        <td>{{$moc->color}}</td>
+        <td>{{$moc->description}}</td>
+        <td><img src="http://bricker.info/images/parts/{{$moc->part}}.jpg" onerror=\"this.src = '//:0';\" width='42'></td>
+        <td>{{$moc->location}}</td>
         <td>{{$moc->quantity}}</td>
+        <td bgcolor='#{{$moc->rgb}}' class='text-white'>{{$moc->color_name}}</td>
+        <td><img src="http://media.peeron.com/ldraw/images/{{$moc->color}}/{{$moc->part}}.png" onerror=\"this.src = '//:0';\" width='42'></td>
+        <td>API</td>
+        <td> </td>
       </tr>
     @empty
       <tr>
