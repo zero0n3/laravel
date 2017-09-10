@@ -99,9 +99,35 @@ class LegosController extends Controller
         //->union($queryBuilder_2b)
         //->union($queryBuilder_3a)
         //->union($queryBuilder_3b)
-        ->orderBy('part','asc')->get();
-        //dd($mocs);
+        ->orderBy('part','asc')->get()->toArray();
+        
+
+        foreach($mocs as $m){
+            //echo $m['part']."<br>";
+            $array[] = $m['part'];
+
+        }
+        /*
+        $result = DB::select($query)->toArray();
+        
+        foreach($result as $r){
+            echo $r['email'];
+        }
+        */
+        dd($array);
+        
         return view('lego.moc', ['mocs' => $mocs]);
     }
+
+
+
+    public function parts( Request $request ){
+        
+
+       
+        return view('lego.parts');
+    }
+
+
 
 }

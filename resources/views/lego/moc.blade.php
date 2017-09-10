@@ -1,8 +1,10 @@
-<?php use GuzzleHttp\Client; 
+<?php //use GuzzleHttp\Client; 
 
-      $client = new Client();
-      $res = $client->request('GET', 'http://rebrickable.com/api/v3/lego/parts/3001/colors/4/?key=BzyyfQneul');
-      echo $res->getBody();
+      //$client = new Client();
+      //$res = $client->request('GET', 'http://rebrickable.com/api/v3/lego/parts/3001/colors/2/?key=BzyyfQneul');
+      //$data = json_decode($res->getBody(), true);
+      //$data = json_decode($data, true);
+      //dd($data['part_img_url']));
 /*
         $client = new Client(['base_uri' => 'http://rebrickable.com/api/v3/lego/']);
 	      $response = $client->get('parts/3001/colors/4/?key=BzyyfQneul');
@@ -25,7 +27,7 @@
 
   <h2>MOC</h2>
   @if (session()->has('message'))
-    @component('components.alert-info')
+    @component('components.alert-info')su
       {{session()->get('message')}}
     @endcomponent
   @endif
@@ -51,7 +53,12 @@
         <td>{{$moc->quantity}}</td>
         <td bgcolor='#{{$moc->rgb}}' class='text-white'>{{$moc->color_name}}</td>
         <td><img src="http://media.peeron.com/ldraw/images/{{$moc->color}}/{{$moc->part}}.png" onerror=\"this.src = '//:0';\" width='42'></td>
-        <td>API</td>
+        <td><img src="https://m.rebrickable.com/media/parts/ldraw/{{$moc->color}}/{{$moc->part}}.png" onerror=\"this.src = '//:0';\" width='42'></td>
+        <?php
+            //$res = $client->request('GET', 'http://rebrickable.com/api/v3/lego/parts/'.$moc->part.'/colors/'.$moc->color.'/?key=BzyyfQneul');
+            //$data = json_decode($res->getBody(), true);
+            //echo "<img src='".$data['part_img_url']."' onerror=\'this.src = '//:0';\' width='42'></td>";
+        ?>
         <td> </td>
       </tr>
     @empty
