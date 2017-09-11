@@ -1,3 +1,26 @@
+<?php //use GuzzleHttp\Client; 
+
+      //$client = new Client();
+      //$res = $client->request('GET', 'http://rebrickable.com/api/v3/lego/parts/3001/colors/2/?key=BzyyfQneul');
+      //$data = json_decode($res->getBody(), true);
+      //$data = json_decode($data, true);
+      //dd($data['part_img_url']));
+/*
+        $client = new Client(['base_uri' => 'http://rebrickable.com/api/v3/lego/']);
+	      $response = $client->get('parts/3001/colors/4/?key=BzyyfQneul');
+        $data = $response->getBody();
+        $data = json_decode($data, true);
+        dd($data);
+*/
+        
+        //dd($data['part_img_url']);
+
+
+
+//print_r($data['part_img_url']);
+            
+            //<img src="{{$data['part_img_url']}}">?>
+
 @extends('templates.default')
 
 @section('content')
@@ -23,9 +46,9 @@
         <td><img src="http://bricker.info/images/parts/{{$lpart->part}}.jpg" onerror=\"this.src = '//:0';\" width='42'></td>
         <td><img src="https://m.rebrickable.com/media/parts/ldraw/{{$lpart->color}}/{{$lpart->part}}.png" onerror=\"this.src = '//:0';\" width='42'></td>
         <?php
-            $res = $client->request('GET', 'http://rebrickable.com/api/v3/lego/parts/'.$lpart->part.'/colors/'.$lpart->color.'/?key=BzyyfQneul');
-            $data = json_decode($res->getBody(), true);
-            echo "<img src='".$data['part_img_url']."' onerror=\'this.src = '//:0';\' width='42'></td>";
+            //$res = $client->request('GET', 'http://rebrickable.com/api/v3/lego/parts/'.$lpart->part.'/colors/'.$lpart->color.'/?key=BzyyfQneul');
+            //$data = json_decode($res->getBody(), true);
+            //echo "<img src='".$data['part_img_url']."' onerror=\'this.src = '//:0';\' width='42'></td>";
         ?>
       </tr>
     @empty
