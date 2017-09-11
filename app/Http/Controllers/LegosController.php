@@ -127,7 +127,7 @@ class LegosController extends Controller
 	    
 	$lparts = $queryBuilder->get();
         
-	return view('lego.parts', ['albums' => $albums]);
+	return view('lego.parts', ['lparts' => $lparts]);
        
         
     }
