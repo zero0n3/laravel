@@ -123,9 +123,13 @@ class LegosController extends Controller
 
     public function parts( Request $request ){
         
-
+	$queryBuilder = Ldblego::orderBy('part','asc');
+	    
+	$lparts = $queryBuilder->get();
+        
+	return view('lego.parts', ['albums' => $albums]);
        
-        return view('lego.parts');
+        
     }
 
 
