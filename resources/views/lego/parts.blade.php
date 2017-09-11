@@ -23,16 +23,23 @@
         <td><img src="http://bricker.info/images/parts/{{$lpart->part}}.jpg" onerror=\"this.src = '//:0';\" width='42'></td>
         <td><img src="https://m.rebrickable.com/media/parts/ldraw/{{$lpart->color}}/{{$lpart->part}}.png" onerror=\"this.src = '//:0';\" width='42'></td>
         <?php
-            //$res = $client->request('GET', 'http://rebrickable.com/api/v3/lego/parts/'.$lpart->part.'/colors/'.$lpart->color.'/?key=BzyyfQneul');
-            //$data = json_decode($res->getBody(), true);
-            //echo "<img src='".$data['part_img_url']."' onerror=\'this.src = '//:0';\' width='42'></td>";
+            $res = $client->request('GET', 'http://rebrickable.com/api/v3/lego/parts/'.$lpart->part.'/colors/'.$lpart->color.'/?key=BzyyfQneul');
+            $data = json_decode($res->getBody(), true);
+            echo "<img src='".$data['part_img_url']."' onerror=\'this.src = '//:0';\' width='42'></td>";
         ?>
       </tr>
     @empty
       <tr>
-        <td colspan="5">no PARTS</td>
+        <td colspan="4">no PARTS</td>
       </tr>
     @endforelse
+
+
+    <tr>
+      <td colspan="4" class="text-center">
+        {{$lparts->links('vendor.pagination.bootstrap-4')}}
+      </td>
+    </tr>
 
 @endsection
 

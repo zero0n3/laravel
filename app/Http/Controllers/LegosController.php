@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Lmoc;
+use App\Models\Ldblego;
 use Illuminate\Http\Request;
 use DB;
 
@@ -125,7 +126,7 @@ class LegosController extends Controller
         
 	$queryBuilder = Ldblego::orderBy('part','asc');
 	    
-	$lparts = $queryBuilder->get();
+	$lparts = $queryBuilder->paginate(50);
         
 	return view('lego.parts', ['lparts' => $lparts]);
        
