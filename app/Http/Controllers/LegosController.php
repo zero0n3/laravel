@@ -13,7 +13,6 @@ class LegosController extends Controller
 {
     public function index( Request $request ){
         
-        //asd
         //  1 - PEZZI CHE NON SONO NEL MIO DB - DA COMPRARE TUTTI
         $queryBuilder_1 = Lmoc::selectRaw('lcolors.color_name, lcolors.rgb,lparts.description, lmocs.part, lmocs.color, lmocs.quantity')
         ->leftJoin('lparts', 'lmocs.part', '=', 'lparts.part_num' )
