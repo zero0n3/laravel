@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
         User::truncate();
         Album::truncate();
         Photo::truncate();
+        Luser::truncate();
         //Ldblego::truncate();
         //Lpart::truncate();
         //Luser::truncate();
