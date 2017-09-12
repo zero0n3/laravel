@@ -124,13 +124,36 @@ class LegosController extends Controller
 
     public function parts( Request $request ){
         
-	$queryBuilder = Ldblego::orderBy('part','asc');
-	    
-	$lparts = $queryBuilder->paginate(50);
-        
-	return view('lego.parts', ['lparts' => $lparts]);
+    	$queryBuilder = Ldblego::orderBy('part','asc');
+    	    
+    	$lparts = $queryBuilder->paginate(50);
+            
+    	return view('lego.parts', ['lparts' => $lparts]);
        
         
+    }
+
+
+       /**
+     * @param Request $req
+     * @param mixed   $id
+     * @param mixed   $album
+     */
+    public function processFileLego(Request $req, $id, &$album){
+      if(!$req->hasFile('album_thumb')){
+        return false;
+      }
+
+      $file = $req->file('album_thumb');
+      if(!$file->isValid()){
+        return false;
+      }
+
+
+      $fileName = $id . '.' . $file->extension();
+      $file->storeAs(env('ALBUM_THUMB_DIR'), $fileName);
+      $album->album_thumb = env('ALBUM_THUMB_DIR').$fileName;
+      return true;
     }
 
 
