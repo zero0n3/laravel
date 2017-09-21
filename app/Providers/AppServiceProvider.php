@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Schema;
 class AppServiceProvider extends ServiceProvider
 {
     /**
-     * Bootstrap any application services. speriem
+     * Bootstrap any application services. speriem ciaooo
      *
      * @return void
      */
