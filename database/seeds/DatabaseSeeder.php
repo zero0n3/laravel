@@ -44,5 +44,6 @@ class DatabaseSeeder extends Seeder
         //$this->call(SeedLpartTable::class);
         //$this->call(SeedLdblegoTable::class);
         //$this->call(SeedLmocTable::class);
+        $this->call(LusersTableSeeder::class);
     }
 }
