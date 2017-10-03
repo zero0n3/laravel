@@ -39,11 +39,12 @@ class DatabaseSeeder extends Seeder
 
         // LEGO
         //$this->call(SeedLcategorieTable::class);
-        $this->call(SeedLuserTable::class);
+        //$this->call(SeedLuserTable::class);
         //$this->call(SeedLcolorTable::class);
         //$this->call(SeedLpartTable::class);
         //$this->call(SeedLdblegoTable::class);
         //$this->call(SeedLmocTable::class);
         $this->call(LusersTableSeeder::class);
+        $this->call(LdbLegoUserTableSeeder::class);
     }
 }
