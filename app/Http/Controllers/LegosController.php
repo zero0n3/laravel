@@ -116,10 +116,11 @@ class LegosController extends Controller
             echo $r['email'];
         }
         */
-        //dd($mocs);
-        $tests = $queryBuilder->get();
+	$mocs = $queryBuilder->get();
+        dd($mocs);
         
-	return view('lego.moc', ['mocs' => $tests]);
+        
+	return view('lego.moc', ['mocs' => $mocs]);
     }
 
 
