@@ -50,5 +50,6 @@ class DatabaseSeeder extends Seeder
         $this->call(LcolorsTableSeeder::class);
         $this->call(LpartsTableSeeder::class);
         $this->call(LdbPartTableSeeder::class);
+        $this->call(LmocsTableSeeder::class);
     }
 }
