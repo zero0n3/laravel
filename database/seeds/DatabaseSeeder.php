@@ -46,5 +46,7 @@ class DatabaseSeeder extends Seeder
         //$this->call(SeedLmocTable::class);
         $this->call(LusersTableSeeder::class);
         $this->call(LdbLegoUserTableSeeder::class);
+        $this->call(LcategoriesTableSeeder::class);
+        $this->call(LcolorsTableSeeder::class);
     }
 }
