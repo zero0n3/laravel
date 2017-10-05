@@ -12,7 +12,8 @@ use DB;
 class LegosController extends Controller
 {
     public function index( Request $request ){
-        
+        $queryBuilder = DB::table('lmocs');
+	/*
         //  1 - PEZZI CHE NON SONO NEL MIO DB - DA COMPRARE TUTTI
         $queryBuilder_1 = Lmoc::selectRaw('lcolors.color_name, lcolors.rgb,lparts.description, lmocs.part, lmocs.color, lmocs.quantity')
         ->leftJoin('lparts', 'lmocs.part', '=', 'lparts.part_num' )
@@ -107,7 +108,7 @@ class LegosController extends Controller
             //echo $m['part']."<br>";
             //$array[] = $m['part'];
 
-        //}
+        //}*/
         /*
         $result = DB::select($query)->toArray();
         
@@ -116,8 +117,9 @@ class LegosController extends Controller
         }
         */
         //dd($mocs);
+        $tests = $queryBuilder->get();
         
-        return view('lego.moc', ['mocs' => $mocs]);
+	return view('lego.moc', ['mocs' => $tests]);
     }
 
 
