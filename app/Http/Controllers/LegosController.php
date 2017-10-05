@@ -115,7 +115,7 @@ class LegosController extends Controller
             echo $r['email'];
         }
         */
-        dd($mocs);
+        //dd($mocs);
         
         return view('lego.moc', ['mocs' => $mocs]);
     }
