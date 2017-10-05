@@ -19,33 +19,33 @@ class LegosController extends Controller
         ->leftJoin('lcolors', 'lmocs.color', '=', 'lcolors.col_num')
         ->whereNotExists(function ($query) {
 				$query->select(DB::raw(1))
-				      ->from('ldblegos')
-				      ->whereRaw('lmocs.part = ldblegos.part AND lmocs.color = ldblegos.color');
+				      ->from('ldb_part')
+				      ->whereRaw('lmocs.part = ldb_part.part AND lmocs.color = ldb_part.color');
                 		});
                 
 
 
         //  2a - PEZZI CHE SONO NEL MIO DB MA NON NE HO ABBASTANZA - QUI IMPOSTO LA DIFFERENZA DA COMPRARE
-        $queryBuilder_2a = Lmoc::selectRaw('lcolors.color_name, lcolors.rgb,lparts.description, concat("2a- ", lmocs.part) AS part, lmocs.color, (lmocs.quantity - ldblegos.quantity) as quantity')
+        $queryBuilder_2a = Lmoc::selectRaw('lcolors.color_name, lcolors.rgb,lparts.description, concat("2a- ", lmocs.part) AS part, lmocs.color, (lmocs.quantity - ldb_part.quantity) as quantity')
         ->leftJoin('lparts', 'lmocs.part', '=', 'lparts.part_num' )
         ->leftJoin('lcolors', 'lmocs.color', '=', 'lcolors.col_num')
-        ->join('ldblegos', function($join) {
-            $join->on('lmocs.part', '=', 'ldblegos.part');
-            $join->on('lmocs.color', '=', 'ldblegos.color');
+        ->join('ldb_part', function($join) {
+            $join->on('lmocs.part', '=', 'ldb_part.part');
+            $join->on('lmocs.color', '=', 'ldb_part.color');
         })
-        ->whereRaw('(lmocs.quantity - ldblegos.quantity) > 0');
+        ->whereRaw('(lmocs.quantity - ldb_part.quantity) > 0');
 
 	
 	
         //  2b - PEZZI CHE SONO NEL MIO DB MA NON NE HO ABBASTANZA - QUI IMPOSTO LA QUANTITA' DEL MIO DB CHE ANDRò AD AZZERARE QUINDI
-        $queryBuilder_2b = Lmoc::selectRaw('lcolors.color_name, lcolors.rgb,lparts.description, concat("2b- ", lmocs.part, " ***") AS part, lmocs.color, ldblegos.quantity')
+        $queryBuilder_2b = Lmoc::selectRaw('lcolors.color_name, lcolors.rgb,lparts.description, concat("2b- ", lmocs.part, " ***") AS part, lmocs.color, ldb_part.quantity')
         ->leftJoin('lparts', 'lmocs.part', '=', 'lparts.part_num' )
         ->leftJoin('lcolors', 'lmocs.color', '=', 'lcolors.col_num')
-        ->join('ldblegos', function($join) {
-            $join->on('lmocs.part', '=', 'ldblegos.part');
-            $join->on('lmocs.color', '=', 'ldblegos.color');
+        ->join('ldb_part', function($join) {
+            $join->on('lmocs.part', '=', 'ldb_part.part');
+            $join->on('lmocs.color', '=', 'ldb_part.color');
             })
-        ->whereRaw('(lmocs.quantity - ldblegos.quantity) > 0');
+        ->whereRaw('(lmocs.quantity - ldb_part.quantity) > 0');
         
         
         
@@ -53,18 +53,18 @@ class LegosController extends Controller
         $queryBuilder_3a = Lmoc::selectRaw('lcolors.color_name, lcolors.rgb,lparts.description, concat("3a- ", lmocs.part) AS part, lmocs.color, lmocs.quantity')
         ->leftJoin('lparts', 'lmocs.part', '=', 'lparts.part_num' )
         ->leftJoin('lcolors', 'lmocs.color', '=', 'lcolors.col_num')
-        ->join('ldblegos', function($join) {
-                $join->on('lmocs.part', '=', 'ldblegos.part');
-                $join->on('lmocs.color', '=', 'ldblegos.color');
+        ->join('ldb_part', function($join) {
+                $join->on('lmocs.part', '=', 'ldb_part.part');
+                $join->on('lmocs.color', '=', 'ldb_part.color');
             })
-            ->whereRaw('(lmocs.quantity - ldblegos.quantity) <= 0 AND
+            ->whereRaw('(lmocs.quantity - ldb_part.quantity) <= 0 AND
             lmocs.part NOT IN (
                 SELECT DISTINCT lmocs.part
                 FROM lmocs
-                JOIN ldblegos ON lmocs.part = ldblegos.part 
+                JOIN ldb_part ON lmocs.part = ldb_part.part 
                 WHERE NOT EXISTS (SELECT 1
-                    FROM ldblegos 
-                    WHERE lmocs.part = ldblegos.part AND lmocs.color = ldblegos.color)
+                    FROM ldb_part 
+                    WHERE lmocs.part = ldb_part.part AND lmocs.color = ldb_part.color)
             )');
         
         
@@ -73,18 +73,18 @@ class LegosController extends Controller
         $queryBuilder_3b = Lmoc::selectRaw('lcolors.color_name, lcolors.rgb,lparts.description, concat("3b- ", lmocs.part, " ***") AS part, lmocs.color, lmocs.quantity')
         ->leftJoin('lparts', 'lmocs.part', '=', 'lparts.part_num' )
         ->leftJoin('lcolors', 'lmocs.color', '=', 'lcolors.col_num')
-        ->join('ldblegos', function($join) {
-                $join->on('lmocs.part', '=', 'ldblegos.part');
-                $join->on('lmocs.color', '=', 'ldblegos.color');
+        ->join('ldb_part', function($join) {
+                $join->on('lmocs.part', '=', 'ldb_part.part');
+                $join->on('lmocs.color', '=', 'ldb_part.color');
             })
-            ->whereRaw('(lmocs.quantity - ldblegos.quantity) <= 0 AND
+            ->whereRaw('(lmocs.quantity - ldb_part.quantity) <= 0 AND
             lmocs.part IN (
                 SELECT DISTINCT lmocs.part
                 FROM lmocs
-                JOIN ldblegos ON lmocs.part = ldblegos.part 
+                JOIN ldb_part ON lmocs.part = ldb_part.part 
                 WHERE NOT EXISTS (SELECT 1
-                    FROM ldblegos 
-                    WHERE lmocs.part = ldblegos.part AND lmocs.color = ldblegos.color)
+                    FROM ldb_part 
+                    WHERE lmocs.part = ldb_part.part AND lmocs.color = ldb_part.color)
             )');
 
             
