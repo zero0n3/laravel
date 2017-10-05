@@ -12,8 +12,8 @@ use DB;
 class LegosController extends Controller
 {
     public function index( Request $request ){
-        $queryBuilder = DB::table('lmocs');
-	/*
+        //$queryBuilder = DB::table('lmocs');
+
         //  1 - PEZZI CHE NON SONO NEL MIO DB - DA COMPRARE TUTTI
         $queryBuilder_1 = Lmoc::selectRaw('lcolors.color_name, lcolors.rgb,lparts.description, lmocs.part, lmocs.color, lmocs.quantity')
         ->leftJoin('lparts', 'lmocs.part', '=', 'lparts.part_num' )
@@ -25,7 +25,7 @@ class LegosController extends Controller
                 		});
                 
 
-
+	/*
         //  2a - PEZZI CHE SONO NEL MIO DB MA NON NE HO ABBASTANZA - QUI IMPOSTO LA DIFFERENZA DA COMPRARE
         $queryBuilder_2a = Lmoc::selectRaw('lcolors.color_name, lcolors.rgb,lparts.description, concat("2a- ", lmocs.part) AS part, lmocs.color, (lmocs.quantity - ldb_part.quantity) as quantity')
         ->leftJoin('lparts', 'lmocs.part', '=', 'lparts.part_num' )
@@ -87,7 +87,7 @@ class LegosController extends Controller
                     FROM ldb_part 
                     WHERE lmocs.part = ldb_part.part AND lmocs.color = ldb_part.color)
             )');
-
+	*/
             
 
 
@@ -101,14 +101,14 @@ class LegosController extends Controller
         //->union($queryBuilder_2b)
         //->union($queryBuilder_3a)
         //->union($queryBuilder_3b)
-        ->orderBy('part','asc')->get()->toArray();
+        ->orderBy('part','asc')->get();
         
 
         //foreach($mocs as $m){
             //echo $m['part']."<br>";
             //$array[] = $m['part'];
 
-        //}*/
+        //}
         /*
         $result = DB::select($query)->toArray();
         
