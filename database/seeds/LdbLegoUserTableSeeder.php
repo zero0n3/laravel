@@ -47,7 +47,7 @@ class LdbLegoUserTableSeeder extends Seeder
             3 => 
             array (
                 'id' => 4,
-                'name_db' => 'lista_2_utente_2',
+                'name_db' => 'MIO DB TEST',
                 'user_id' => 2,
                 'deleted_at' => NULL,
                 'created_at' => NULL,

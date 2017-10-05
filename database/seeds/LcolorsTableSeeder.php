@@ -24,9 +24,9 @@ class LcolorsTableSeeder extends Seeder
                 'color_name' => 'Black',
                 'rgb' => '05131D',
                 'trasp' => 'f   ',
-                'deleted_at' => '0000-00-00 00:00:00',
-                'created_at' => '0000-00-00 00:00:00',
-                'updated_at' => '0000-00-00 00:00:00',
+                'deleted_at' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
             ),
             1 => 
             array (
@@ -35,9 +35,9 @@ class LcolorsTableSeeder extends Seeder
                 'color_name' => 'Blue',
                 'rgb' => '0055BF',
                 'trasp' => 'f   ',
-                'deleted_at' => '0000-00-00 00:00:00',
-                'created_at' => '0000-00-00 00:00:00',
-                'updated_at' => '0000-00-00 00:00:00',
+                'deleted_at' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
             ),
             2 => 
             array (
@@ -46,9 +46,9 @@ class LcolorsTableSeeder extends Seeder
                 'color_name' => 'Green',
                 'rgb' => '237841',
                 'trasp' => 'f   ',
-                'deleted_at' => '0000-00-00 00:00:00',
-                'created_at' => '0000-00-00 00:00:00',
-                'updated_at' => '0000-00-00 00:00:00',
+                'deleted_at' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
             ),
             3 => 
             array (
@@ -57,9 +57,9 @@ class LcolorsTableSeeder extends Seeder
                 'color_name' => 'Red',
                 'rgb' => 'C91A09',
                 'trasp' => 'f   ',
-                'deleted_at' => '0000-00-00 00:00:00',
-                'created_at' => '0000-00-00 00:00:00',
-                'updated_at' => '0000-00-00 00:00:00',
+                'deleted_at' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
             ),
             4 => 
             array (
@@ -68,9 +68,9 @@ class LcolorsTableSeeder extends Seeder
                 'color_name' => 'Dark Pink',
                 'rgb' => 'C870A0',
                 'trasp' => 'f   ',
-                'deleted_at' => '0000-00-00 00:00:00',
-                'created_at' => '0000-00-00 00:00:00',
-                'updated_at' => '0000-00-00 00:00:00',
+                'deleted_at' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
             ),
             5 => 
             array (
@@ -79,9 +79,9 @@ class LcolorsTableSeeder extends Seeder
                 'color_name' => 'Brown',
                 'rgb' => '583927',
                 'trasp' => 'f   ',
-                'deleted_at' => '0000-00-00 00:00:00',
-                'created_at' => '0000-00-00 00:00:00',
-                'updated_at' => '0000-00-00 00:00:00',
+                'deleted_at' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
             ),
             6 => 
             array (
@@ -90,9 +90,9 @@ class LcolorsTableSeeder extends Seeder
                 'color_name' => 'Light Gray',
                 'rgb' => '9BA19D',
                 'trasp' => 'f   ',
-                'deleted_at' => '0000-00-00 00:00:00',
-                'created_at' => '0000-00-00 00:00:00',
-                'updated_at' => '0000-00-00 00:00:00',
+                'deleted_at' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
             ),
             7 => 
             array (
@@ -101,9 +101,9 @@ class LcolorsTableSeeder extends Seeder
                 'color_name' => 'Yellow',
                 'rgb' => 'F2CD37',
                 'trasp' => 'f   ',
-                'deleted_at' => '0000-00-00 00:00:00',
-                'created_at' => '0000-00-00 00:00:00',
-                'updated_at' => '0000-00-00 00:00:00',
+                'deleted_at' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
             ),
             8 => 
             array (
@@ -112,9 +112,9 @@ class LcolorsTableSeeder extends Seeder
                 'color_name' => 'White',
                 'rgb' => 'FFFFFF',
                 'trasp' => 'f   ',
-                'deleted_at' => '0000-00-00 00:00:00',
-                'created_at' => '0000-00-00 00:00:00',
-                'updated_at' => '0000-00-00 00:00:00',
+                'deleted_at' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
             ),
             9 => 
             array (
@@ -123,9 +123,9 @@ class LcolorsTableSeeder extends Seeder
                 'color_name' => 'Tan',
                 'rgb' => 'E4CD9E',
                 'trasp' => 'f   ',
-                'deleted_at' => '0000-00-00 00:00:00',
-                'created_at' => '0000-00-00 00:00:00',
-                'updated_at' => '0000-00-00 00:00:00',
+                'deleted_at' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
             ),
             10 => 
             array (
@@ -134,9 +134,9 @@ class LcolorsTableSeeder extends Seeder
                 'color_name' => 'Orange',
                 'rgb' => 'FE8A18',
                 'trasp' => 'f   ',
-                'deleted_at' => '0000-00-00 00:00:00',
-                'created_at' => '0000-00-00 00:00:00',
-                'updated_at' => '0000-00-00 00:00:00',
+                'deleted_at' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
             ),
             11 => 
             array (
@@ -145,9 +145,9 @@ class LcolorsTableSeeder extends Seeder
                 'color_name' => 'Trans-Green',
                 'rgb' => '84B68D',
                 'trasp' => 't   ',
-                'deleted_at' => '0000-00-00 00:00:00',
-                'created_at' => '0000-00-00 00:00:00',
-                'updated_at' => '0000-00-00 00:00:00',
+                'deleted_at' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
             ),
             12 => 
             array (
@@ -156,9 +156,9 @@ class LcolorsTableSeeder extends Seeder
                 'color_name' => 'Trans-Red',
                 'rgb' => 'C91A09',
                 'trasp' => 't   ',
-                'deleted_at' => '0000-00-00 00:00:00',
-                'created_at' => '0000-00-00 00:00:00',
-                'updated_at' => '0000-00-00 00:00:00',
+                'deleted_at' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
             ),
             13 => 
             array (
@@ -167,9 +167,9 @@ class LcolorsTableSeeder extends Seeder
                 'color_name' => 'Trans-Black',
                 'rgb' => '635F52',
                 'trasp' => 't   ',
-                'deleted_at' => '0000-00-00 00:00:00',
-                'created_at' => '0000-00-00 00:00:00',
-                'updated_at' => '0000-00-00 00:00:00',
+                'deleted_at' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
             ),
             14 => 
             array (
@@ -178,9 +178,9 @@ class LcolorsTableSeeder extends Seeder
                 'color_name' => 'Trans-Light Blue',
                 'rgb' => 'AEEFEC',
                 'trasp' => 't   ',
-                'deleted_at' => '0000-00-00 00:00:00',
-                'created_at' => '0000-00-00 00:00:00',
-                'updated_at' => '0000-00-00 00:00:00',
+                'deleted_at' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
             ),
             15 => 
             array (
@@ -189,9 +189,9 @@ class LcolorsTableSeeder extends Seeder
                 'color_name' => 'Trans-Neon Green',
                 'rgb' => 'F8F184',
                 'trasp' => 't   ',
-                'deleted_at' => '0000-00-00 00:00:00',
-                'created_at' => '0000-00-00 00:00:00',
-                'updated_at' => '0000-00-00 00:00:00',
+                'deleted_at' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
             ),
             16 => 
             array (
@@ -200,9 +200,9 @@ class LcolorsTableSeeder extends Seeder
                 'color_name' => 'Trans-Yellow',
                 'rgb' => 'F5CD2F',
                 'trasp' => 't   ',
-                'deleted_at' => '0000-00-00 00:00:00',
-                'created_at' => '0000-00-00 00:00:00',
-                'updated_at' => '0000-00-00 00:00:00',
+                'deleted_at' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
             ),
             17 => 
             array (
@@ -211,9 +211,9 @@ class LcolorsTableSeeder extends Seeder
                 'color_name' => 'Trans-Clear',
                 'rgb' => 'FCFCFC',
                 'trasp' => 't   ',
-                'deleted_at' => '0000-00-00 00:00:00',
-                'created_at' => '0000-00-00 00:00:00',
-                'updated_at' => '0000-00-00 00:00:00',
+                'deleted_at' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
             ),
             18 => 
             array (
@@ -222,9 +222,9 @@ class LcolorsTableSeeder extends Seeder
                 'color_name' => 'Trans-Neon Orange',
                 'rgb' => 'FF800D',
                 'trasp' => 't   ',
-                'deleted_at' => '0000-00-00 00:00:00',
-                'created_at' => '0000-00-00 00:00:00',
-                'updated_at' => '0000-00-00 00:00:00',
+                'deleted_at' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
             ),
             19 => 
             array (
@@ -233,9 +233,9 @@ class LcolorsTableSeeder extends Seeder
                 'color_name' => 'Reddish Brown',
                 'rgb' => '582A12',
                 'trasp' => 'f   ',
-                'deleted_at' => '0000-00-00 00:00:00',
-                'created_at' => '0000-00-00 00:00:00',
-                'updated_at' => '0000-00-00 00:00:00',
+                'deleted_at' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
             ),
             20 => 
             array (
@@ -244,9 +244,9 @@ class LcolorsTableSeeder extends Seeder
                 'color_name' => 'Light Bluish Gray',
                 'rgb' => 'A0A5A9',
                 'trasp' => 'f   ',
-                'deleted_at' => '0000-00-00 00:00:00',
-                'created_at' => '0000-00-00 00:00:00',
-                'updated_at' => '0000-00-00 00:00:00',
+                'deleted_at' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
             ),
             21 => 
             array (
@@ -255,9 +255,9 @@ class LcolorsTableSeeder extends Seeder
                 'color_name' => 'Dark Bluish Gray',
                 'rgb' => '6C6E68',
                 'trasp' => 'f   ',
-                'deleted_at' => '0000-00-00 00:00:00',
-                'created_at' => '0000-00-00 00:00:00',
-                'updated_at' => '0000-00-00 00:00:00',
+                'deleted_at' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
             ),
             22 => 
             array (
@@ -266,9 +266,9 @@ class LcolorsTableSeeder extends Seeder
                 'color_name' => 'Metallic Silver',
                 'rgb' => 'A5A9B4',
                 'trasp' => 'f   ',
-                'deleted_at' => '0000-00-00 00:00:00',
-                'created_at' => '0000-00-00 00:00:00',
-                'updated_at' => '0000-00-00 00:00:00',
+                'deleted_at' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
             ),
             23 => 
             array (
@@ -277,9 +277,9 @@ class LcolorsTableSeeder extends Seeder
                 'color_name' => 'Bright Light Orange',
                 'rgb' => 'F8BB3D',
                 'trasp' => 'f  ',
-                'deleted_at' => '0000-00-00 00:00:00',
-                'created_at' => '0000-00-00 00:00:00',
-                'updated_at' => '0000-00-00 00:00:00',
+                'deleted_at' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
             ),
             24 => 
             array (
@@ -288,9 +288,9 @@ class LcolorsTableSeeder extends Seeder
                 'color_name' => 'Dark Brown',
                 'rgb' => '352100',
                 'trasp' => 'f   ',
-                'deleted_at' => '0000-00-00 00:00:00',
-                'created_at' => '0000-00-00 00:00:00',
-                'updated_at' => '0000-00-00 00:00:00',
+                'deleted_at' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
             ),
             25 => 
             array (
@@ -299,9 +299,9 @@ class LcolorsTableSeeder extends Seeder
                 'color_name' => 'Medium Azure',
                 'rgb' => '36AEBF',
                 'trasp' => 'f   ',
-                'deleted_at' => '0000-00-00 00:00:00',
-                'created_at' => '0000-00-00 00:00:00',
-                'updated_at' => '0000-00-00 00:00:00',
+                'deleted_at' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
             ),
             26 => 
             array (
@@ -310,9 +310,9 @@ class LcolorsTableSeeder extends Seeder
                 'color_name' => 'Very Light Gray',
                 'rgb' => 'E6E3DA',
                 'trasp' => 'f   ',
-                'deleted_at' => '0000-00-00 00:00:00',
-                'created_at' => '0000-00-00 00:00:00',
-                'updated_at' => '0000-00-00 00:00:00',
+                'deleted_at' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
             ),
             27 => 
             array (
@@ -321,9 +321,9 @@ class LcolorsTableSeeder extends Seeder
                 'color_name' => 'Glow in Dark White',
                 'rgb' => 'D9D9D9',
                 'trasp' => 'f  ',
-                'deleted_at' => '0000-00-00 00:00:00',
-                'created_at' => '0000-00-00 00:00:00',
-                'updated_at' => '0000-00-00 00:00:00',
+                'deleted_at' => NULL,
+                'created_at' => NULL,
+                'updated_at' => NULL,
             ),
         ));
         

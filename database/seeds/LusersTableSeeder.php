@@ -31,7 +31,7 @@ class LusersTableSeeder extends Seeder
             1 => 
             array (
                 'id' => 2,
-                'name' => 'Lily Kohler',
+                'name' => 'DANEEL OLIVAW',
                 'email' => 'kayli35@example.net',
                 'password' => '$2y$10$TxBdiQYl8SWzP4C2ZJI7L.GQPPuXxC59DcozSLFLSpuLTWvaDZVk6',
                 'remember_token' => 'esOROrP1ta',
