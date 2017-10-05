@@ -103,11 +103,11 @@ class LegosController extends Controller
         ->orderBy('part','asc')->get()->toArray();
         
 
-        foreach($mocs as $m){
+        //foreach($mocs as $m){
             //echo $m['part']."<br>";
-            $array[] = $m['part'];
+            //$array[] = $m['part'];
 
-        }
+        //}
         /*
         $result = DB::select($query)->toArray();
         
@@ -115,7 +115,7 @@ class LegosController extends Controller
             echo $r['email'];
         }
         */
-        //dd($array);
+        dd($mocs);
         
         return view('lego.moc', ['mocs' => $mocs]);
     }
