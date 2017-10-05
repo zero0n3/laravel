@@ -116,7 +116,7 @@ class LegosController extends Controller
             echo $r['email'];
         }
         */
-	$mocs = $queryBuilder->get();
+
         dd($mocs);
         
         
