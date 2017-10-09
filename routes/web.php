@@ -30,6 +30,7 @@ Route::get('welcome/{name?}/{lastname?}/{age?}', 'WelcomeController@welcome')
 //lego
   Route::get('/moc','LegosController@index');
   Route::get('/parts','LegosController@parts');
+  Route::get('/imgparts','LegosController@imgparts');
 //fine lego
 
 
