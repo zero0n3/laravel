@@ -8,7 +8,7 @@ class Album extends Model {
 //nel caso i nomi non coincidessero
   protected $table = 'albums';
   protected $primaryKey = 'id';
-  protected $fillable = [rt
+  protected $fillable = [
     'album_name',
     'description',
     'user_id'
