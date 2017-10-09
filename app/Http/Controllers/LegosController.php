@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Lmoc;
 use App\Models\Ldblego;
+use App\Models\Lpart;
 use Illuminate\Http\Request;
 use DB;
 

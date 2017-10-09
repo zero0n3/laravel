@@ -1,6 +1,7 @@
 <div class="form-group">
     <label for="">Thumbnail</label>
-    <input type="file" name="album_thumb" id="album_thumb" value="{{$album->album_name}}" class="form-control" placeholder="Album name">
+    <input type="file" name="album_thumb" id="album_thumb" value="{{$album->album_name}}" class="form-control" placeh
+    older="Album name">
 </div>
 
 @if($album->album_thumb)
