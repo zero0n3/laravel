@@ -1,3 +1,8 @@
+<?php use GuzzleHttp\Client; 
+
+      $client = new Client();
+      ?>
+
 @extends('templates.default')
 
 @section('content')
@@ -15,13 +20,26 @@
       <th>COLOR</th>
       <th>IMG 1</th>
       <th>IMG 2</th>
+      <th>IMG DB</th>
     </tr>
-   @forelse ($lparts as $lpart)
+   @forelse ($ldb_parts as $ldb_part)
       <tr>
-        <td>{{$lpart->part}}</td>
-        <td>{{$lpart->color}}</td>
-        <td><img src="http://bricker.info/images/parts/{{$lpart->part}}.jpg" onerror=\"this.src = '//:0';\" width='42'></td>
-        <td><img src="https://m.rebrickable.com/media/parts/ldraw/{{$lpart->color}}/{{$lpart->part}}.png" onerror=\"this.src = '//:0';\" width='42'></td>
+        <td>{{$ldb_part->part}}</td>
+        <td>{{$ldb_part->color}}</td>
+        <td><img src="http://bricker.info/images/parts/{{$ldb_part->part}}.jpg" onerror=\"this.src = '//:0';\" width='42'></td>
+        <td><img src="https://m.rebrickable.com/media/parts/ldraw/{{$ldb_part->color}}/{{$ldb_part->part}}.png" onerror=\"this.src = '//:0';\" width='42'></td>
+        <td>
+        @if ($ldb_part->img_path_1)
+          {{$ldb_part->img_path_1}}
+        @else
+        <?php
+            $res = $client->request('GET', 'http://rebrickable.com/api/v3/lego/parts/'.$ldb_part->part.'/colors/'.$ldb_part->color.'/?key=BzyyfQneul');
+            $data = json_decode($res->getBody(), true);
+            echo $data['part_img_url']
+        ?>
+        @endif
+
+        </td>
       </tr>
     @empty
       <tr>
@@ -32,7 +50,7 @@
 
     <tr>
       <td colspan="4" class="text-center">
-        {{$lparts->links('vendor.pagination.bootstrap-4')}}
+        {{$ldb_parts->links('vendor.pagination.bootstrap-4')}}
       </td>
     </tr>
 

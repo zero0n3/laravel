@@ -145,7 +145,7 @@ class LegosController extends Controller
     	$queryBuilder = Ldb_part::orderBy('part','asc');
     	    
     	$ldb_parts = $queryBuilder->paginate(10);
-        dd($ldb_parts);   
+        //dd($ldb_parts);   
     	return view('lego.imgparts', ['ldb_parts' => $ldb_parts]);
        
         
