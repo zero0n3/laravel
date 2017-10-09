@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Lmoc;
 use App\Models\Ldblego;
 use App\Models\Lpart;
+use App\Models\Ldb_part;
 use Illuminate\Http\Request;
 use DB;
 
@@ -141,11 +142,11 @@ class LegosController extends Controller
 
     public function imgparts( Request $request ){
         
-    	$queryBuilder = Lpart::orderBy('part_num','asc');
+    	$queryBuilder = Ldb_part::orderBy('part','asc');
     	    
-    	$lparts = $queryBuilder->paginate(10);
-        dd($lparts);   
-    	return view('lego.imgparts', ['lparts' => $lparts]);
+    	$ldb_parts = $queryBuilder->paginate(10);
+        dd($ldb_parts);   
+    	return view('lego.imgparts', ['ldb_parts' => $ldb_parts]);
        
         
     }
