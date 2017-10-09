@@ -14,7 +14,7 @@ class AddImg1ToLdbPart extends Migration
     public function up()
     {
         Schema::table('ldb_part', function($table) {
-            $table->string('img_path_1',128);
+            $table->string('img_path_1',128)->nullable();
         });
     }
 
