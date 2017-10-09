@@ -140,7 +140,7 @@ class LegosController extends Controller
 
     public function imgparts( Request $request ){
         
-    	$queryBuilder = Lparts::orderBy('part_num','asc');
+    	$queryBuilder = Lpart::orderBy('part_num','asc');
     	    
     	$lparts = $queryBuilder->paginate(10);
             
