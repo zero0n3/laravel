@@ -1,6 +1,10 @@
 <?php use GuzzleHttp\Client; 
 
+
+
       $client = new Client();
+
+   
       ?>
 
 @extends('templates.default')
@@ -33,10 +37,12 @@
           {{$ldb_part->img_path_1}}
         @else
         <?php
-            $res = $client->request('GET', 'http://rebrickable.com/api/v3/lego/parts/'.$ldb_part->part.'/colors/'.$ldb_part->color.'/?key=BzyyfQneul');
-            $data = json_decode($res->getBody(), true);
-            echo $data['part_img_url']
-        ?>
+ 
+
+ 
+
+            
+        ?>niente
         @endif
 
         </td>

@@ -8,6 +8,11 @@ use App\Models\Lpart;
 use App\Models\Ldb_part;
 use Illuminate\Http\Request;
 use DB;
+use GuzzleHttp\Client; 
+
+
+
+
 
 
 
@@ -145,6 +150,27 @@ class LegosController extends Controller
     	$queryBuilder = Ldb_part::orderBy('part','asc');
     	    
     	$ldb_parts = $queryBuilder->paginate(10);
+              $client = new Client();
+
+        foreach ($ldb_parts as $ldb_part){
+
+
+           $res = $client->request('GET', 'http://rebrickable.com/api/v3/lego/parts/'.$ldb_part->part.'/colors/'.$ldb_part->color.'/?key=BzyyfQneul');
+            $data = json_decode($res->getBody(), true);
+            //dd($data['part_img_url']);
+
+            $file = $data['part_img_url'];
+            $fileName = $ldb_part->part.'-'.$ldb_part->color.'.jpg';
+            //$file->storeAs(env('ALBUM_THUMB_DIR'), $fileName);
+                
+                $img = 'storage/'.env('ALBUM_THUMB_DIR').$fileName;
+                file_put_contents($img, file_get_contents($file));
+
+                //dd();
+
+        }
+
+
         //dd($ldb_parts);   
     	return view('lego.imgparts', ['ldb_parts' => $ldb_parts]);
        
