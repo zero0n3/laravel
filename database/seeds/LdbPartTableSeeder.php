@@ -27,7 +27,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 83,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             1 => 
             array (
@@ -39,7 +39,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 26,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             2 => 
             array (
@@ -51,7 +51,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 18,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             3 => 
             array (
@@ -63,7 +63,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 15,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             4 => 
             array (
@@ -75,7 +75,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 30,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             5 => 
             array (
@@ -87,7 +87,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 6,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             6 => 
             array (
@@ -99,7 +99,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 13,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             7 => 
             array (
@@ -111,7 +111,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 17,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             8 => 
             array (
@@ -123,7 +123,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 15,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             9 => 
             array (
@@ -135,7 +135,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 15,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             10 => 
             array (
@@ -147,7 +147,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 15,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             11 => 
             array (
@@ -159,7 +159,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 26,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             12 => 
             array (
@@ -171,7 +171,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 19,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             13 => 
             array (
@@ -183,7 +183,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 26,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             14 => 
             array (
@@ -195,7 +195,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 15,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             15 => 
             array (
@@ -207,7 +207,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 17,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             16 => 
             array (
@@ -219,7 +219,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 20,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             17 => 
             array (
@@ -231,7 +231,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 18,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             18 => 
             array (
@@ -243,7 +243,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 22,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             19 => 
             array (
@@ -255,7 +255,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 16,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             20 => 
             array (
@@ -267,7 +267,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 19,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             21 => 
             array (
@@ -279,7 +279,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 14,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             22 => 
             array (
@@ -291,7 +291,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 26,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             23 => 
             array (
@@ -303,7 +303,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 20,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             24 => 
             array (
@@ -315,7 +315,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 25,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             25 => 
             array (
@@ -327,7 +327,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 31,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             26 => 
             array (
@@ -339,7 +339,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 23,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             27 => 
             array (
@@ -351,7 +351,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 17,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             28 => 
             array (
@@ -363,7 +363,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 19,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             29 => 
             array (
@@ -375,7 +375,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 14,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             30 => 
             array (
@@ -387,7 +387,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 17,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             31 => 
             array (
@@ -399,7 +399,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 26,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             32 => 
             array (
@@ -411,7 +411,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 18,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             33 => 
             array (
@@ -423,7 +423,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 9,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             34 => 
             array (
@@ -435,7 +435,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 15,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             35 => 
             array (
@@ -447,7 +447,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 16,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             36 => 
             array (
@@ -459,7 +459,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 19,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             37 => 
             array (
@@ -471,7 +471,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 16,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             38 => 
             array (
@@ -483,7 +483,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 5,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             39 => 
             array (
@@ -495,7 +495,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 5,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             40 => 
             array (
@@ -507,7 +507,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 40,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             41 => 
             array (
@@ -519,7 +519,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 29,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             42 => 
             array (
@@ -531,7 +531,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 4,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             43 => 
             array (
@@ -543,7 +543,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 38,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             44 => 
             array (
@@ -555,7 +555,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 3,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             45 => 
             array (
@@ -567,7 +567,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 24,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             46 => 
             array (
@@ -579,7 +579,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 32,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             47 => 
             array (
@@ -591,7 +591,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 30,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             48 => 
             array (
@@ -603,7 +603,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 16,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             49 => 
             array (
@@ -615,7 +615,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 22,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             50 => 
             array (
@@ -627,7 +627,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 20,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             51 => 
             array (
@@ -639,7 +639,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 2,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             52 => 
             array (
@@ -651,7 +651,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 9,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             53 => 
             array (
@@ -663,7 +663,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 20,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             54 => 
             array (
@@ -675,7 +675,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 20,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             55 => 
             array (
@@ -687,7 +687,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 24,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             56 => 
             array (
@@ -699,7 +699,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 14,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             57 => 
             array (
@@ -711,7 +711,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 19,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             58 => 
             array (
@@ -723,7 +723,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 34,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             59 => 
             array (
@@ -735,7 +735,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 23,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             60 => 
             array (
@@ -747,7 +747,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 24,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             61 => 
             array (
@@ -759,7 +759,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 21,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             62 => 
             array (
@@ -771,7 +771,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 28,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             63 => 
             array (
@@ -783,7 +783,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 35,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             64 => 
             array (
@@ -795,7 +795,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 14,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             65 => 
             array (
@@ -807,7 +807,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 19,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             66 => 
             array (
@@ -819,7 +819,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 30,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             67 => 
             array (
@@ -831,7 +831,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 2,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             68 => 
             array (
@@ -843,7 +843,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 23,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             69 => 
             array (
@@ -855,7 +855,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 20,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             70 => 
             array (
@@ -867,7 +867,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 24,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             71 => 
             array (
@@ -879,7 +879,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 23,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             72 => 
             array (
@@ -891,7 +891,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 15,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             73 => 
             array (
@@ -903,7 +903,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 34,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             74 => 
             array (
@@ -915,7 +915,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 36,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             75 => 
             array (
@@ -927,7 +927,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 14,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             76 => 
             array (
@@ -939,7 +939,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 25,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             77 => 
             array (
@@ -951,7 +951,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 37,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             78 => 
             array (
@@ -963,7 +963,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 17,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             79 => 
             array (
@@ -975,7 +975,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 22,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             80 => 
             array (
@@ -987,7 +987,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 16,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             81 => 
             array (
@@ -999,7 +999,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 12,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             82 => 
             array (
@@ -1011,7 +1011,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 2,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             83 => 
             array (
@@ -1023,7 +1023,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 16,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             84 => 
             array (
@@ -1035,7 +1035,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 26,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             85 => 
             array (
@@ -1047,7 +1047,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 21,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             86 => 
             array (
@@ -1059,7 +1059,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 35,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             87 => 
             array (
@@ -1071,7 +1071,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 16,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             88 => 
             array (
@@ -1083,7 +1083,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 25,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             89 => 
             array (
@@ -1095,7 +1095,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 17,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             90 => 
             array (
@@ -1107,7 +1107,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 4,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             91 => 
             array (
@@ -1119,7 +1119,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 14,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             92 => 
             array (
@@ -1131,7 +1131,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 17,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             93 => 
             array (
@@ -1143,7 +1143,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 18,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             94 => 
             array (
@@ -1155,7 +1155,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 38,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             95 => 
             array (
@@ -1167,7 +1167,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 9,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             96 => 
             array (
@@ -1179,7 +1179,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 17,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             97 => 
             array (
@@ -1191,7 +1191,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 14,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             98 => 
             array (
@@ -1203,7 +1203,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 27,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             99 => 
             array (
@@ -1215,7 +1215,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 17,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             100 => 
             array (
@@ -1227,7 +1227,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 14,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             101 => 
             array (
@@ -1239,7 +1239,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 14,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             102 => 
             array (
@@ -1251,7 +1251,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 36,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             103 => 
             array (
@@ -1263,7 +1263,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 23,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             104 => 
             array (
@@ -1275,7 +1275,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 21,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             105 => 
             array (
@@ -1287,7 +1287,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 14,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             106 => 
             array (
@@ -1299,7 +1299,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 23,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             107 => 
             array (
@@ -1311,7 +1311,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 31,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             108 => 
             array (
@@ -1323,7 +1323,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 31,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             109 => 
             array (
@@ -1335,7 +1335,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 20,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             110 => 
             array (
@@ -1347,7 +1347,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 19,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             111 => 
             array (
@@ -1359,7 +1359,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 26,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             112 => 
             array (
@@ -1371,7 +1371,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 27,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             113 => 
             array (
@@ -1383,7 +1383,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 19,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             114 => 
             array (
@@ -1395,7 +1395,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 20,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             115 => 
             array (
@@ -1407,7 +1407,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 36,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             116 => 
             array (
@@ -1419,7 +1419,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 14,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             117 => 
             array (
@@ -1431,7 +1431,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 15,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             118 => 
             array (
@@ -1443,7 +1443,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 18,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             119 => 
             array (
@@ -1455,7 +1455,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 20,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             120 => 
             array (
@@ -1467,7 +1467,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 18,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             121 => 
             array (
@@ -1479,7 +1479,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 30,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             122 => 
             array (
@@ -1491,7 +1491,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 16,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             123 => 
             array (
@@ -1503,7 +1503,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 15,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             124 => 
             array (
@@ -1515,7 +1515,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 32,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             125 => 
             array (
@@ -1527,7 +1527,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 16,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             126 => 
             array (
@@ -1539,7 +1539,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 14,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             127 => 
             array (
@@ -1551,7 +1551,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 16,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             128 => 
             array (
@@ -1563,7 +1563,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 15,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             129 => 
             array (
@@ -1575,7 +1575,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 29,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             130 => 
             array (
@@ -1587,7 +1587,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 26,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             131 => 
             array (
@@ -1599,7 +1599,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 16,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             132 => 
             array (
@@ -1611,7 +1611,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 14,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             133 => 
             array (
@@ -1623,7 +1623,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 20,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             134 => 
             array (
@@ -1635,7 +1635,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 24,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             135 => 
             array (
@@ -1647,7 +1647,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 28,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             136 => 
             array (
@@ -1659,7 +1659,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 23,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             137 => 
             array (
@@ -1671,7 +1671,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 16,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             138 => 
             array (
@@ -1683,7 +1683,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 14,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             139 => 
             array (
@@ -1695,7 +1695,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 16,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             140 => 
             array (
@@ -1707,7 +1707,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 3,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             141 => 
             array (
@@ -1719,7 +1719,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 16,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             142 => 
             array (
@@ -1731,7 +1731,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 38,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             143 => 
             array (
@@ -1743,7 +1743,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 572,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             144 => 
             array (
@@ -1755,7 +1755,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 221,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             145 => 
             array (
@@ -1767,7 +1767,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 246,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             146 => 
             array (
@@ -1779,7 +1779,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 22,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             147 => 
             array (
@@ -1791,7 +1791,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 21,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             148 => 
             array (
@@ -1803,7 +1803,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 14,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             149 => 
             array (
@@ -1815,7 +1815,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 37,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             150 => 
             array (
@@ -1827,7 +1827,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 25,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             151 => 
             array (
@@ -1839,7 +1839,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 27,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             152 => 
             array (
@@ -1851,7 +1851,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 26,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             153 => 
             array (
@@ -1863,7 +1863,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 37,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             154 => 
             array (
@@ -1875,7 +1875,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 30,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             155 => 
             array (
@@ -1887,7 +1887,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 22,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             156 => 
             array (
@@ -1899,7 +1899,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 20,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             157 => 
             array (
@@ -1911,7 +1911,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 5,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             158 => 
             array (
@@ -1923,7 +1923,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 20,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             159 => 
             array (
@@ -1935,7 +1935,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 3,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             160 => 
             array (
@@ -1947,7 +1947,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 6,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             161 => 
             array (
@@ -1959,7 +1959,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 18,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             162 => 
             array (
@@ -1971,7 +1971,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 16,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             163 => 
             array (
@@ -1983,7 +1983,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 35,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             164 => 
             array (
@@ -1995,7 +1995,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 12,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             165 => 
             array (
@@ -2007,7 +2007,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 1,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             166 => 
             array (
@@ -2019,7 +2019,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 3,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             167 => 
             array (
@@ -2031,7 +2031,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 20,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             168 => 
             array (
@@ -2043,7 +2043,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 1,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             169 => 
             array (
@@ -2055,7 +2055,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 17,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             170 => 
             array (
@@ -2067,7 +2067,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 20,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             171 => 
             array (
@@ -2079,7 +2079,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 7,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             172 => 
             array (
@@ -2091,7 +2091,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 18,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             173 => 
             array (
@@ -2103,7 +2103,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 25,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             174 => 
             array (
@@ -2115,7 +2115,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 24,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             175 => 
             array (
@@ -2127,7 +2127,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 26,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             176 => 
             array (
@@ -2139,7 +2139,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 15,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             177 => 
             array (
@@ -2151,7 +2151,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 30,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             178 => 
             array (
@@ -2163,7 +2163,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 1,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             179 => 
             array (
@@ -2175,7 +2175,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 28,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             180 => 
             array (
@@ -2187,7 +2187,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 1,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             181 => 
             array (
@@ -2199,7 +2199,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 18,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             182 => 
             array (
@@ -2211,7 +2211,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 17,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             183 => 
             array (
@@ -2223,7 +2223,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 16,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             184 => 
             array (
@@ -2235,7 +2235,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 28,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             185 => 
             array (
@@ -2247,7 +2247,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 2,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             186 => 
             array (
@@ -2259,7 +2259,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 33,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             187 => 
             array (
@@ -2271,7 +2271,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 20,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             188 => 
             array (
@@ -2283,7 +2283,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 26,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             189 => 
             array (
@@ -2295,7 +2295,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 26,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             190 => 
             array (
@@ -2307,7 +2307,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 12,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             191 => 
             array (
@@ -2319,7 +2319,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 19,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             192 => 
             array (
@@ -2331,7 +2331,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 20,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             193 => 
             array (
@@ -2343,7 +2343,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 18,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             194 => 
             array (
@@ -2355,7 +2355,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 15,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             195 => 
             array (
@@ -2367,7 +2367,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 20,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             196 => 
             array (
@@ -2379,7 +2379,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 39,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             197 => 
             array (
@@ -2391,7 +2391,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 15,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
             198 => 
             array (
@@ -2403,7 +2403,7 @@ class LdbPartTableSeeder extends Seeder
                 'quantity' => 20,
                 'deleted_at' => NULL,
                 'created_at' => NULL,
-                'updated_at' => NULL,
+                'updated_at' => NULL, 'img_path_1' => NULL
             ),
         ));
         
