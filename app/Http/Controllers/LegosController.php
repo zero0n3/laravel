@@ -135,6 +135,20 @@ class LegosController extends Controller
        
         
     }
+	
+	
+
+    public function imgparts( Request $request ){
+        
+    	$queryBuilder = Ldblego::orderBy('part','asc');
+    	    
+    	$lparts = $queryBuilder->paginate(50);
+            
+    	return view('lego.parts', ['lparts' => $lparts]);
+       
+        
+    }
+	
 
 
        /**
