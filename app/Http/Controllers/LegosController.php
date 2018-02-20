@@ -32,7 +32,7 @@ class LegosController extends Controller
                 		});
                 
 
-
+	//	PEZZI CHE HO NEL MIO DB MA IMPOSTO PRIMA LA DIFFERENZADA COMPRARE E POI MOSTRO I MIEI DA RECUPERARE E CHE QUINDI AZZERO
         //  2a - PEZZI CHE SONO NEL MIO DB MA NON NE HO ABBASTANZA - QUI IMPOSTO LA DIFFERENZA DA COMPRARE
         $queryBuilder_2a = Lmoc::selectRaw('lcolors.color_name, lcolors.rgb,lparts.description, concat("2a- ", lmocs.part) AS part, lmocs.color, (lmocs.quantity - ldb_part.quantity) as quantity')
         ->leftJoin('lparts', 'lmocs.part', '=', 'lparts.part_num' )
@@ -56,7 +56,8 @@ class LegosController extends Controller
         ->whereRaw('(lmocs.quantity - ldb_part.quantity) > 0');
         
         
-        
+        //	PEZZI CHE HO NEL MIO DB IN QUANTITà UGUALE O SUPERIORE ALLA NECESSITà - LI DIVIDO IN BASE AL FATTO CHE DI QUEL TIPO
+	//	NE COMPRO ALTRI O MENO PER TENERE FUORI I SACCHETTI DA RIEMPIRE CON GLI ORDINI SUCCESSIVI.
         //	3a - PEZZI CHE SONO NEL MIO DB E NE HO ABBASTANZA MA NON SONO NEI PEZZI DA ORDINE - PEZZI UNICI CON SACCHETTO DEDICATO
         $queryBuilder_3a = Lmoc::selectRaw('lcolors.color_name, lcolors.rgb,lparts.description, concat("3a- ", lmocs.part) AS part, lmocs.color, lmocs.quantity')
         ->leftJoin('lparts', 'lmocs.part', '=', 'lparts.part_num' )
