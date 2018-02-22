@@ -8,9 +8,11 @@
 
     <title>@yield('title', 'Home')</title>
 
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap core CSS 
     <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/app.css" rel="stylesheet">-->
+    <link rel="stylesheet" type="text/css" href="/css/semantic.min.css">
+    <script src="/js/semantic.min.js"></script>
 
   </head>
 
