@@ -8,11 +8,10 @@
 
     <title>@yield('title', 'Home')</title>
 
-    <!-- Bootstrap core CSS 
+    <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/app.css" rel="stylesheet">-->
-    <link rel="stylesheet" type="text/css" href="/css/semantic.min.css">
-    <script src="/js/semantic.min.js"></script>
+    <link href="/css/app.css" rel="stylesheet">
+    <!--<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">-->
 
   </head>
 
@@ -71,6 +70,7 @@
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="/js/bootstrap.min.js"></script>
+<!--<script src="semantic/dist/semantic.min.js"></script>-->
 @show
   </body>
 </html>
